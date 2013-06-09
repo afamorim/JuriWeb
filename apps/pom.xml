@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.vortice.ijuri</groupId>
+	<artifactId>ijuri</artifactId>
+	<packaging>pom</packaging>
+	<version>1.0-SNAPSHOT</version>
+	<name>IJURI</name>
+	<url>http://www.juriweb.com.br</url>
+  
+	<modules>
+		<module>ijuri-core</module>
+		<module>ijuri-webapp</module>
+		<module>ijuri-webjava</module>
+		<module>ijuri-business</module>
+	</modules>
+    
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>commons-beanutils</groupId>
+				<artifactId>commons-beanutils</artifactId>
+				<version>1.8.3</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.vortice.core</groupId>
+				<artifactId>vortice-core</artifactId>
+				<!--version>1.0-SNAPSHOT</version-->
+				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>br.com.vortice.ijuri.core</groupId>
+				<artifactId>ijuri-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.vortice.seguranca.core</groupId>
+				<artifactId>seguranca-core</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.vortice.segurancaSpring.business</groupId>
+				<artifactId>segurancaSpring-business</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>com.vortice.segurancaSpring.web</groupId>
+				<artifactId>segurancaSpring-web</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	
+</project>   

@@ -1,7 +1,571 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
-
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--DOCTYPE web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+                         "http://java.sun.com/dtd/web-app_2_3.dtd"-->
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<description>
+		IJURI - Sistema de Controle de Processo Juridicos
+	</description>
+	
+	<context-param>
+		<param-name>DESENV</param-name>
+		<param-value>2</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>DEBUG</param-name>
+		<param-value>1</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>INDEX_PAGE</param-name>
+		<param-value>/seguranca/index.jsf</param-value>
+	</context-param>
+	<context-param>
+		<param-name>LOGIN_PAGE</param-name>
+		<param-value>/login.jsf</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>ERROR_PAGE</param-name>
+		<param-value>/erro.jsp</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>LOCALE_LANGUAGE</param-name>
+		<param-value>pt</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>LOCALE_COUNTRY</param-name>
+		<param-value>BR</param-value>
+	</context-param>
+	
+	<!--  CONFIGURACAO DO LOCALE PARA O JSTL  -->
+	<context-param>
+		<param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
+		<param-value>pt_BR</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>DATE_FORMAT</param-name>
+		<param-value>dd/MM/yyyy</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>TIME_FORMAT</param-name>
+		<param-value>hh:mm</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>
+			javax.servlet.jsp.jstl.fmt.localizationContext
+		</param-name>
+		<param-value>ijuri</param-value>
+	</context-param>
+	
+	<!-- RICHFACES -->
+	<context-param>
+		<param-name>facelets.REFRESH_PERIOD</param-name>
+		<param-value>2</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>facelets.DEVELOPMENT</param-name>
+		<param-value>true</param-value>
+	</context-param>
+ 
+	<context-param>
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+		<param-value>server</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>org.richfaces.SKIN</param-name>
+		<param-value>blueSky</param-value>
+	</context-param>
+ 
+	<filter>
+		<display-name>Ajax4jsf Filter</display-name>
+		<filter-name>ajax4jsf</filter-name>
+		<filter-class>org.ajax4jsf.Filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ajax4jsf</filter-name>
+		<servlet-name>Faces Servlet</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+	
+ 	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+ 
+	<!-- RICHFACES -->
+	
+	<!-- context-param>
+		<param-name>org.apache.myfaces.PRETTY_HTML</param-name>
+		<param-value>true</param-value>
+		<description>
+			Deixa o HTML gerado pelo JSF bem renderizado
+		</description>
+	</context-param>
+	
+	<context-param>
+		<param-name>javax.faces.STATE_SAVING_METHOD</param-name>
+		<param-value>client</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>
+			org.apache.myfaces.COMPRESS_STATE_IN_SESSION
+		</param-name>
+		<param-value>false</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>
+			org.apache.myfaces.SERIALIZE_STATE_IN_SESSION
+		</param-name>
+		<param-value>false</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>
+			org.apache.myfaces.CHECK_EXTENSIONS_FILTER
+		</param-name>
+		<param-value>false</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>com.sun.faces.enableHtmlTagLibValidator</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>org.apache.myfaces.ALLOW_JAVASCRIPT</param-name>
+		<param-value>true</param-value>
+		<description>
+			This parameter tells MyFaces if javascript code should be
+			allowed in the rendered HTML output. If javascript is
+			allowed, command_link anchors will have javascript code that
+			submits the corresponding form. If javascript is not
+			allowed, the state saving info and nested parameters will be
+			added as url parameters. Default: "true"
+		</description>
+	</context-param>
+	
+	<context-param>
+		<param-name>org.apache.myfaces.DETECT_JAVASCRIPT</param-name>
+		<param-value>false</param-value>
+		<description>
+			This parameter tells MyFaces if javascript code should be
+			allowed in the rendered HTML output. If javascript is
+			allowed, command_link anchors will have javascript code that
+			submits the corresponding form. If javascript is not
+			allowed, the state saving info and nested parameters will be
+			added as url parameters. Default: "false"
+
+			Setting this param to true should be combined with
+			STATE_SAVING_METHOD "server" for best results.
+
+			This is an EXPERIMENTAL feature. You also have to enable the
+			detector filter/filter mapping below to get JavaScript
+			detection working.
+		</description>
+	</context-param-->
+	
+	<!-- Filters -->
+	<!-- filter>
+		<filter-name>extensionsFilter</filter-name>
+		<filter-class>
+			org.apache.myfaces.webapp.filter.ExtensionsFilter
+		</filter-class>
+		<init-param>
+			<param-name>uploadMaxFileSize</param-name>
+			<param-value>100m</param-value>
+		</init-param>
+		<init-param>
+			<param-name>uploadThresholdSize</param-name>
+			<param-value>100k</param-value>
+		</init-param>
+	</filter-->
+	<filter>
+		<filter-name>SegurancaFilter</filter-name>
+		<filter-class>
+			com.vortice.seguranca.cliente.web.SegurancaFilter
+		</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>DwrFacesFilter</filter-name>
+		<filter-class>
+			uk.ltd.getahead.dwr.servlet.FacesExtensionFilter
+		</filter-class>
+	</filter>
+	
+	<filter>
+	 	<filter-name>ResponseOverrideFilter</filter-name>
+		<filter-class>org.displaytag.filter.ResponseOverrideFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>ResponseOverrideFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>ResponseOverrideFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	
+	<!-- Start of SiteMesh stuff Filter-->    
+ 	<filter>
+ 		<filter-name>sitemesh</filter-name>
+		<filter-class>com.opensymphony.module.sitemesh.filter.PageFilter</filter-class>
+	</filter>
+	
+	
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>*.jsf</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>sitemesh</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	<!-- End of SiteMesh stuff Filter-->
+	
+	<filter-mapping>
+		<filter-name>DwrFacesFilter</filter-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>SegurancaFilter</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+	
+	<!--  filter-mapping>
+		<filter-name>extensionsFilter</filter-name>
+		<url-pattern>*.jsf</url-pattern>
+	</filter-mapping>
+	
+	<filter-mapping>
+		<filter-name>extensionsFilter</filter-name>
+		<url-pattern>/faces/*</url-pattern>
+	</filter-mapping-->
+	
+	
+	<!-- listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+		</listener-->
+	<!-- listener>
+		<listener-class>
+			org.apache.myfaces.webapp.StartupServletContextListener
+		</listener-class>
+	</listener>
+	<servlet>
+		<servlet-name>SourceCodeServlet</servlet-name>
+		<servlet-class>
+			org.apache.myfaces.shared_tomahawk.util.servlet.SourceCodeServlet
+		</servlet-class>
+	</servlet-->
+	
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.jsf</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>context-loader</servlet-name>
+		<servlet-class>
+			org.springframework.web.context.ContextLoaderServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+	<!--  SERVLETS RELATORIOS -->
+	<servlet>
+		<servlet-name>processoDetalhamentoReport</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.cliente.web.action.ProcessoDetalhamentoReportAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ProcessoAgendaAndamentosReportAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.cliente.web.action.ProcessoAgendaAndamentosReportAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>TipoAndamentoCarregarComboAjaxAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.cliente.web.action.TipoAndamentoCarregarComboAjaxAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ProcessoListReportAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.cliente.web.action.ProcessoListReportAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ProcessoClienteListReportAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.cliente.web.action.ProcessoClienteListReportAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ParcelaAcordoEmissaoReciboAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.acordo.cliente.web.action.ParcelaAcordoEmissaoReciboAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ParcelaAcordoClienteListReport</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.acordo.cliente.web.action.ParcelaAcordoClienteListReportAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DocumentoDownloadAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.documento.cliente.web.action.DocumentoDownloadAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>JurisprudenciaDownloadAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.site.cliente.web.action.JurisprudenciaDownloadAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ParcelaAcordoListReport</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.acordo.cliente.web.action.ParcelaAcordoListReportAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>IndiceReajusteCarregarAjax</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.monetario.cliente.action.IndiceReajusteCarregarAjax
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CalcularCorrecaoMonetariaAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.monetario.cliente.action.CalcularCorrecaoMonetariaAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RemoveCorrecaoAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.monetario.cliente.action.RemoveCorrecaoAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CorrecaoListReport</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.monetario.cliente.action.CorrecaoListReport
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>OrgaoJudiciarioCarregarComboAjaxAC</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.processo.cliente.web.action.OrgaoJudiciarioCarregarComboAjaxAC
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>PeriodoIndiceFindLastAjax</servlet-name>
+		<servlet-class>
+			br.com.vortice.ijuri.monetario.cliente.action.PeriodoIndiceFindLastAjax
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<display-name>DWR Servlet</display-name>
+		<servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PeriodoIndiceFindLastAjax</servlet-name>
+		<url-pattern>
+			/admin/CorrecaoMonetaria/PeriodoIndice/CarregaUltimoMes.ajax
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CorrecaoListReport</servlet-name>
+		<url-pattern>/admin/CorrecaoMontearia/ListReport</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RemoveCorrecaoAC</servlet-name>
+		<url-pattern>
+			/admin/CorrecaoMonetaria/RemoveCorrecao.ajax
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CalcularCorrecaoMonetariaAC</servlet-name>
+		<url-pattern>
+			/admin/CorrecaoMonetaria/CalcularCorrecao.ajax
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>IndiceReajusteCarregarAjax</servlet-name>
+		<url-pattern>
+			/admin/CorrecaoMonetaria/CarregarIndice.ajax
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessoClienteListReportAC</servlet-name>
+		<url-pattern>
+			/admin/Processo/ProcessoClienteListReport
+		</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ProcessoClienteListReportAC</servlet-name>
+		<url-pattern>
+			/adminCliente/Processo/ProcessoClienteListReport
+		</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>ProcessoListReportAC</servlet-name>
+		<url-pattern>/admin/Processo/ProcessoListReport</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>processoDetalhamentoReport</servlet-name>
+		<url-pattern>/admin/Processo/DetalhamentoReport</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ProcessoAgendaAndamentosReportAC</servlet-name>
+		<url-pattern>
+			/admin/Processo/AgendaAndamentosReport
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TipoAndamentoCarregarComboAjaxAC</servlet-name>
+		<url-pattern>
+			/admin/Processo/TipoAndamento/CarregarCombo
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ParcelaAcordoEmissaoReciboAC</servlet-name>
+		<url-pattern>/admin/Processo/Acordo/EmissaoRecibo</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DocumentoDownloadAC</servlet-name>
+		<url-pattern>/admin/Documento/Download</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>JurisprudenciaDownloadAC</servlet-name>
+		<url-pattern>/Site/Jurisprudencia/Download</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ParcelaAcordoClienteListReport</servlet-name>
+		<url-pattern>
+			/admin/Processo/Acordo/Parcela/ClienteListReport
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ParcelaAcordoListReport</servlet-name>
+		<url-pattern>
+			/admin/Processo/Acordo/Parcela/ListReport
+		</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>OrgaoJudiciarioCarregarComboAjaxAC</servlet-name>
+		<url-pattern>/admin/Processo/Orgao/CarregarCombo</url-pattern>
+	</servlet-mapping>
+	
+	<!-- servlet-mapping>
+		<servlet-name>SourceCodeServlet</servlet-name>
+		<url-pattern>*.source</url-pattern>
+	</servlet-mapping-->
+	<welcome-file-list>
+		<welcome-file>site/index.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<taglib>
+		<taglib-uri>/tags/c</taglib-uri>
+		<taglib-location>/WEB-INF/tld/c.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/tags/fmt</taglib-uri>
+		<taglib-location>/WEB-INF/tld/fmt.tld</taglib-location>
+	</taglib>
+	
+	<!-- Start of SiteMesh stuff Tag Lib-->
+	<taglib>
+		<taglib-uri>sitemesh-page</taglib-uri>
+		<taglib-location>/WEB-INF/tld/sitemesh-page.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>sitemesh-decorator</taglib-uri>
+		<taglib-location>/WEB-INF/tld/sitemesh-decorator.tld</taglib-location>
+	</taglib>
+	<!-- End of SiteMesh stuff Tag Lib-->
+	
+	<!-- Struts Tag Library Descriptors -->
+	<taglib>
+		<taglib-uri>/tags/struts-bean</taglib-uri>
+		<taglib-location>/WEB-INF/tld/struts-bean.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/tags/struts-html</taglib-uri>
+		<taglib-location>/WEB-INF/tld/struts-html.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/tags/struts-logic</taglib-uri>
+		<taglib-location>/WEB-INF/tld/struts-logic.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/tags/struts-nested</taglib-uri>
+		<taglib-location>
+			/WEB-INF/tld/struts-nested.tld
+		</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/tags/navigator</taglib-uri>
+		<taglib-location>/WEB-INF/tld/pager-taglib.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>/tags/tree</taglib-uri>
+		<taglib-location>/WEB-INF/tld/treetag.tld</taglib-location>
+	</taglib>
+	<login-config>
+		<auth-method>BASIC</auth-method>
+	</login-config>
 </web-app>

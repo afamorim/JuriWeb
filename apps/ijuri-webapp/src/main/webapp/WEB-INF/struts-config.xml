@@ -1,0 +1,562 @@
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+    <!-- ======================================== Form Bean Definitions -->
+    <form-beans>
+    	<form-bean name="LinkForm" type="br.com.vortice.ijuri.site.cliente.web.form.LinkForm" />
+    	<form-bean name="IndiceReajusteForm" type="br.com.vortice.ijuri.monetario.cliente.form.IndiceReajusteForm" />
+    	<form-bean name="IndiceReajusteImportacaoForm" type="br.com.vortice.ijuri.monetario.cliente.form.IndiceReajusteImportacaoForm" />
+    	<form-bean name="PeriodoIndiceReajusteForm" type="br.com.vortice.ijuri.monetario.cliente.form.PeriodoIndiceReajusteForm" />
+    	<form-bean name="PropostaOnLineForm" type="br.com.vortice.ijuri.site.cliente.web.form.PropostaOnLineForm" />
+        <form-bean name="JuizoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.JuizoForm" />
+        <form-bean name="OrgaoJudiciarioForm" type="br.com.vortice.ijuri.processo.cliente.web.form.OrgaoJudiciarioForm" />
+        <form-bean name="ClasseProcessoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.ClasseProcessoForm" />
+		<form-bean name="PessoaFisicaForm" type="br.com.vortice.ijuri.pessoa.cliente.web.form.PessoaFisicaForm" />
+		<form-bean name="PessoaForm" type="br.com.vortice.ijuri.pessoa.cliente.web.form.PessoaForm" />
+		<form-bean name="PessoaJuridicaForm" type="br.com.vortice.ijuri.pessoa.cliente.web.form.PessoaJuridicaForm" />
+		<form-bean name="MunicipioForm" type="br.com.vortice.ijuri.localidade.cliente.web.form.MunicipioForm" />
+		<form-bean name="ComarcaForm" type="br.com.vortice.ijuri.processo.cliente.web.form.ComarcaForm" />
+		<form-bean name="ParteProcessoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.ParteProcessoForm" />
+		<form-bean name="TipoAndamentoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.TipoAndamentoForm" />
+		<form-bean name="ProcessoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.ProcessoForm" />
+		<form-bean name="AndamentoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.AndamentoForm" />
+		<form-bean name="UsuarioForm" type="br.com.vortice.ijuri.usuario.cliente.web.form.UsuarioForm" />
+		<form-bean name="TaxaForm" type="br.com.vortice.ijuri.processo.cliente.web.form.TaxaForm" />
+		<form-bean name="AcordoForm" type="br.com.vortice.ijuri.processo.acordo.cliente.web.form.AcordoForm" />
+		<form-bean name="ParcelaAcordoForm" type="br.com.vortice.ijuri.processo.acordo.cliente.web.form.ParcelaAcordoForm" />
+		<form-bean name="DiretorioForm" type="br.com.vortice.ijuri.documento.cliente.web.form.DiretorioForm" /> 
+		<form-bean name="DocumentoForm" type="br.com.vortice.ijuri.documento.cliente.web.form.DocumentoForm" /> 
+		<form-bean name="JurisprudenciaForm" type="br.com.vortice.ijuri.site.cliente.web.form.JurisprudenciaForm" /> 
+	</form-beans>
+
+    <!-- =================================== Global Forward Definitions -->
+
+    <global-forwards>
+        <forward name="ERROR_PAGE" path="/erro.jsp"/>
+    </global-forwards>
+
+    <!-- =================================== Action Mapping Definitions -->
+
+    <action-mappings>
+		
+		<!-- SITE  -->
+		
+		<action path="/Site/Link/CarregarAll" input="/site/Links.jsp" scope="request" name="LinkForm">
+			<forward name="success" path="/site/Links.jsp"/>
+		</action>
+		
+		<action path="/admin/Site/Link/CarregarCadastro" input="/admin/site/linkForm.jsp" scope="request" name="LinkForm">
+			<forward name="success" path="/admin/site/linkForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Site/Link/CarregarPesquisa" input="/admin/site/linkForm.jsp" scope="request" name="LinkForm">
+			<forward name="success" path="/admin/site/linkPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Site/Link/Salvar" input="/admin/site/linkForm.jsp" scope="request" name="LinkForm">
+			<forward name="success" path="/admin/site/linkPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Site/Link/Remover" input="/admin/site/linkForm.jsp" scope="request" name="LinkForm">
+			<forward name="success" path="/admin/site/linkPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Site/Link/Consultar" input="/admin/site/linkPesquisa.jsp" scope="request" name="LinkForm">
+			<forward name="success" path="/admin/site/linkPesquisa.jsp"/>
+		</action>
+		
+		<action path="/Site/Jurisprudencia/Listar" input="/site/Novidades.jsp" scope="request" name="JurisprudenciaForm">
+		</action>
+		
+		<action path="/admin/Site/Jurisprudencia/CarregarCadastro" input="/admin/site/jurisprudenciaForm.jsp" scope="request" name="JurisprudenciaForm">
+			<forward name="success" path="/admin/site/jurisprudenciaForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Site/Jurisprudencia/CarregarPesquisa" input="/admin/site/jurisprudenciaPesquisa.jsp" scope="request" name="JurisprudenciaForm">
+		</action>
+		
+		<action path="/admin/Site/Jurisprudencia/Salvar" input="/admin/site/jurisprudenciaForm.jsp" scope="request" name="JurisprudenciaForm">
+			<forward name="success" path="/admin/site/jurisprudenciaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Site/Jurisprudencia/Remover" input="/admin/site/jurisprudenciaForm.jsp" scope="request" name="JurisprudenciaForm">
+			<forward name="success" path="/admin/site/jurisprudenciaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Site/Jurisprudencia/Pesquisar" input="/admin/site/jurisprudenciaPesquisa.jsp" scope="request" name="JurisprudenciaForm">
+			<forward name="success" path="/admin/site/jurisprudenciaPesquisa.jsp"/>
+		</action>
+		
+		<!-- SITE  -->
+		
+		<action path="/admin/CorrecaoMonetaria/IndiceReajuste/Detalhar" input="/admin/correcaoMonetaria/indiceReajusteForm.jsp" scope="request" name="IndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/indiceReajusteForm.jsp"/>
+		</action>
+		
+		<action path="/admin/CorrecaoMonetaria/IndiceReajuste/CarregarCadastro" input="/admin/correcaoMonetaria/indiceReajusteForm.jsp" scope="request" name="IndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/indiceReajusteForm.jsp"/>
+		</action>
+		
+		<action path="/admin/CorrecaoMonetaria/IndiceReajuste/CarregarImportacao" input="/admin/correcaoMonetaria/indiceReajusteImportacaoForm.jsp" scope="request" name="IndiceReajusteImportacaoForm">
+			<forward name="success" path="/admin/correcaoMonetaria/indiceReajusteImportacaoForm.jsp"/>
+		</action>
+		
+		<action path="/admin/CorrecaoMonetaria/IndiceReajuste/Importacao" input="/admin/correcaoMonetaria/indiceReajusteImportacaoForm.jsp" scope="request" name="IndiceReajusteImportacaoForm">
+			<forward name="success" path="/admin/correcaoMonetaria/indiceReajusteImportacaoForm.jsp"/>
+		</action>
+		
+		<action path="/admin/CorrecaoMonetaria/IndiceReajuste/Salvar" input="/admin/correcaoMonetaria/indiceReajusteForm.jsp" scope="request" name="IndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/indiceReajusteForm.jsp"/>
+		</action>
+		
+		<action path="/admin/CorrecaoMonetaria/IndiceReajuste/Remover" input="/admin/correcaoMonetaria/indiceReajusteForm.jsp" scope="request" name="IndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/indiceReajusteForm.jsp"/>
+		</action>
+		
+		<action path="/admin/CorrecaoMonetario/IndiceReajuste/Consultar" input="/admin/correcaoMonetaria/indiceReajusteForm.jsp" scope="request" name="IndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/indiceReajusteForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Monetario/PeriodoIndiceReajuste/CarregarCadastro" input="/admin/correcaoMonetaria/periodoIndiceForm.jsp" scope="request" name="PeriodoIndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/periodoIndiceForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Monetario/PeriodoIndiceReajuste/Salvar" input="/admin/correcaoMonetaria/periodoIndiceForm.jsp" scope="request" name="PeriodoIndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/periodoIndicePesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Monetario/PeriodoIndiceReajuste/Remover" input="/admin/correcaoMonetaria/periodoIndiceForm.jsp" scope="request" name="PeriodoIndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/periodoIndicePesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Monetario/PeriodoIndiceReajuste/Consultar" input="/admin/correcaoMonetaria/periodoIndicePesquisa.jsp" scope="request" name="PeriodoIndiceReajusteForm">
+			<forward name="success" path="/admin/correcaoMonetaria/periodoIndicePesquisa.jsp"/>
+		</action>
+		<!--  -->
+		
+		<!--  -->
+		<action path="/Site/PropostaOnLine/Carregar" scope="request" name="PropostaOnLineForm" input="/site/propostaOnLineForm.jsp">
+			<forward name="success" path="/site/propostaOnLineForm.jsp"/>
+		</action>
+		
+		<action path="/Site/PropostaOnLinte/Enviar" scope="request" name="PropostaOnLineForm" input="/site/propostaOnLineForm.jsp">
+			<forward name="success" path="/site/propostaOnLineForm.jsp"/>
+		</action>
+		<!--  -->
+		
+		<action path="/Usuario/Autenticar" scope="request" name="UsuarioForm" input="/site/index.jsp">
+			<forward name="success" path="/admin/Processo/CarregarPesquisa.do"/>
+		</action>
+		
+		<action path="/Usuario/Logout" scope="request" name="UsuarioForm" input="/site/index.jsp">
+		</action>
+		
+		<!-- ANDAMENTO -->
+		<action path="/admin/Processo/Andamento/CarregarCadastro" input="/admin/processo/andamentoForm.jsp" scope="request" name="AndamentoForm">
+			<forward name="success" path="/admin/processo/andamentoForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/Andamento/Salvar" input="/admin/processo/andamentoForm.jsp" scope="request" name="AndamentoForm">
+			<forward name="success" path="/admin/Processo/Andamento/CarregarForm.do"/>
+		</action>
+		
+		<action path="/admin/Processo/Andamento/List" input="/admin/processo/andamentoGrid.jsp" scope="request" name="AndamentoForm">
+		</action>
+		
+		<action path="/admin/Processo/Andamento/Remover" input="/admin/Processo/Andamento/List.do" scope="request" name="AndamentoForm">
+		</action>
+		<!-- ANDAMENTO -->
+		
+		<!-- TIPO_ANDAMENTO -->
+		<action path="/admin/Processo/TipoAndamento/CarregarCadastro" input="/admin/processo/tipoAndamentoForm.jsp" scope="request" name="TipoAndamentoForm">
+			<forward name="success" path="/admin/processo/tipoAndamentoForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/TipoAndamento/CarregarPesquisa" input="/admin/processo/tipoAndamentoPesquisa.jsp" scope="request" name="TipoAndamentoForm">
+			<forward name="success" path="/admin/processo/tipoAndamentoPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/TipoAndamento/Salvar" input="/admin/processo/tipoAndamentoForm.jsp" scope="request" name="TipoAndamentoForm">
+			<forward name="success" path="/admin/Processo/TipoAndamento/CarregarPesquisa.do"/>
+		</action>
+		
+		<action path="/admin/Processo/TipoAndamento/List" input="/admin/processo/tipoAndamentoPesquisa.jsp" scope="request" name="TipoAndamentoForm">
+			<forward name="success" path="/admin/Processo/TipoAndamento/CarregarPesquisa.do"/>
+		</action>
+		
+		<action path="/admin/Processo/TipoAndamento/Remover" input="/admin/processo/tipoAndamentoPesquisa.jsp" scope="request" name="TipoAndamentoForm">
+			<forward name="success" path="/admin/Processo/TipoAndamento/CarregarPesquisa.do"/>
+		</action>
+		<!-- TIPO_ANDAMENTO -->
+		
+		<!-- COMARCA -->
+		<action path="/admin/Processo/Comarca/CarregarCadastro" input="/admin/processo/comarcaForm.jsp" scope="request" name="ComarcaForm">
+			<forward name="success" path="/admin/processo/comarcaForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/Comarca/CarregarPesquisa" 
+				input="/admin/processo/comarcaPesquisa.jsp" scope="request" name="ComarcaForm">
+			<forward name="success" path="/admin/processo/comarcaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/Comarca/Salvar" 
+				input="/admin/processo/comarcaForm.jsp" scope="request" name="ComarcaForm">
+			<forward name="success" path="/admin/Processo/Comarca/CarregarPesquisa.do"/>
+		</action>
+		
+		<action path="/admin/Processo/Comarca/List" 
+				input="/admin/processo/comarcaPesquisa.jsp" scope="request" name="ComarcaForm">
+			<forward name="success" path="/admin/processo/comarcaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/Comarca/Remover" input="/admin/processo/comarcaPesquisa.jsp" scope="request" name="ComarcaForm">
+			<forward name="success" path="/admin/Processo/Comarca/List.do"/>
+		</action>
+		<!-- COMARCA -->
+		
+		<!-- ACTIONS JUIZO -->
+		
+		<action path="/admin/Processo/Juizo/CarregarPesquisa" input="/admin/processo/juizoPesquisa.jsp" scope="request" name="JuizoForm">
+		</action>
+		
+		<action path="/admin/Processo/Juizo/CarregarCadastro" input="/admin/processo/juizoForm.jsp" scope="request" name="JuizoForm">
+			<forward name="success" path="/admin/processo/juizoForm.jsp"/>
+		</action>
+	
+		<action path="/admin/Processo/Juizo/Cadastro" input="/admin/processo/juizoForm.jsp" scope="request" name="JuizoForm">
+			<forward name="success" path="/admin/processo/juizoPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/Juizo/Alteracao" input="/admin/processo/juizoForm.jsp" scope="request" name="JuizoForm">
+			<forward name="success" path="/admin/processo/juizoPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/Juizo/List" input="/admin/processo/juizoPesquisa.jsp" scope="request" name="JuizoForm">
+			<forward name="success" path="/admin/processo/juizoPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/Juizo/Remover" input="/admin/processo/juizoPesquisa.jsp" scope="request" name="JuizoForm">
+			<forward name="sucess" path="/admin/Processo/Juizo/List.do"/>	
+		</action>
+		
+		<!-- ACTIONS CLASSE PROCESSO -->
+		<action path="/admin/Processo/ClasseProcesso/CarregarCadastro" 
+				input="/admin/processo/classeProcessoForm.jsp" scope="request" name="ClasseProcessoForm">
+			<forward name="success" path="/admin/processo/classeProcessoForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/ClasseProcesso/CarregarPesquisa" 
+				input="/admin/processo/classeProcessoPesquisa.jsp" scope="request" name="ClasseProcessoForm">
+			<forward name="success" path="/admin/processo/classeProcessoForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/ClasseProcesso/Cadastro" input="/admin/processo/classeProcessoForm.jsp" scope="request" name="ClasseProcessoForm">
+			<forward name="success" path="/admin/processo/classeProcessoPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/ClasseProcesso/Alteracao" 
+				input="/admin/processo/classeProcessoForm.jsp" scope="request" name="ClasseProcessoForm">
+			<forward name="success" path="/admin/processo/classeProcessoPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/ClasseProcesso/List" 
+				input="/admin/processo/classeProcessoPesquisa.jsp" scope="request" name="ClasseProcessoForm">
+			<forward name="success" path="/admin/processo/classeProcessoPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/ClasseProcesso/Remover" 
+				input="/admin/processo/classeProcessoPesquisa.jsp" scope="request" name="ClasseProcessoForm">
+			<forward name="sucess" path="/admin/Processo/ClasseProcesso/List.do"/>	
+		</action>
+		
+		<!--  ACTIONS DE PARTES DO PROCESSO -->
+		<action path="/admin/Processo/ParteProcesso/List" input="/admin/processo/parteProcessoGrid.jsp" scope="request" name="ParteProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/ParteProcesso/Remover" input="/admin/processo/parteProcessoGrid.jsp" scope="request" name="ParteProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/ParteProcesso/CarregarCadastro"  
+				input="/admin/processo/parteProcessoForm.jsp" scope="request" name="ParteProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/ParteProcesso/Cadastro" input="/admin/processo/parteProcessoForm.jsp" scope="request" name="ParteProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/ParteProcesso/Alteracao" input="/admin/processo/parteProcessoForm.jsp" scope="request" name="ParteProcessoForm">
+		</action>
+		
+		<!-- ACTIONS DE ORGAO JUDICIARIO -->
+		<action path="/admin/Processo/Orgao/CarregarCadastro"  
+				input="/admin/processo/orgaoJudiciarioForm.jsp" scope="request" name="OrgaoJudiciarioForm">
+		</action>
+		
+		<action path="/admin/Processo/Orgao/CarregarPesquisa"  
+				input="/admin/processo/orgaoJudiciarioPesquisa.jsp" scope="request" name="OrgaoJudiciarioForm">
+		</action>
+		
+	
+		<action path="/admin/Processo/Orgao/Cadastro" input="/admin/processo/orgaoJudiciarioForm.jsp" scope="request" name="OrgaoJudiciarioForm">
+			<forward name="success" path="/admin/Processo/Orgao/List.do"/>
+		</action>
+		
+		<action path="/admin/Processo/Orgao/List" input="/admin/processo/orgaoJudiciarioPesquisa.jsp" scope="request" name="OrgaoJudiciarioForm">
+			<forward name="success" path="/admin/processo/orgaoJudiciarioPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Processo/Orgao/Remover" input="/admin/processo/orgaoJudiciarioPesquisa.jsp" scope="request" 
+				name="OrgaoJudiciarioForm">
+			<forward name="sucess" path="/admin/Processo/Orgao/List.do"/>	
+		</action>
+		
+		<!-- ACTIONS DE PESSOA -->
+		<action path="/admin/Pessoa/Fisica/CarregarCadastro" input="/admin/pessoa/pessoaFisicaForm.jsp" scope="request" name="PessoaFisicaForm">
+			<forward name="success" path="/admin/pessoa/pessoaFisicaForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Fisica/Cadastro" input="/admin/pessoa/pessoaFisicaForm.jsp" scope="request" name="PessoaFisicaForm">
+			<forward name="success" path="/admin/pessoa/pessoaFisicaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Fisica/CarregarPesquisa" input="/admin/pessoa/pessoaFisicaPesquisa.jsp" name="PessoaFisicaForm">
+			<forward name="success" path="/admin/pessoa/pessoaFisicaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Fisica/List" input="/admin/pessoa/pessoaFisicaPesquisa.jsp" scope="request" name="PessoaFisicaForm">
+			<forward name="success" path="/admin/pessoa/pessoaFisicaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Fisica/Remover" input="/admin/pessoa/pessoaFisicaPesquisa.jsp" scope="request" name="PessoaFisicaForm">
+			<forward name="success" path="/admin/Pessoa/Fisica/List.do"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Juridica/CarregarCadastro" input="/admin/pessoa/pessoaJuridicaForm.jsp" scope="request" name="PessoaJuridicaForm">
+			<forward name="success" path="/admin/pessoa/pessoaJuridicaForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Juridica/Cadastro" input="/admin/pessoa/pessoaJuridicaForm.jsp" scope="request" name="PessoaJuridicaForm">
+			<forward name="success" path="/admin/Pessoa/Juridica/CarregarPesquisa.do"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Juridica/CarregarPesquisa" input="/admin/pessoa/pessoaJuridicaPesquisa.jsp" scope="request" name="PessoaJuridicaForm">
+			<forward name="success" path="/admin/pessoa/pessoaJuridicaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Juridica/List" input="/admin/pessoa/pessoaJuridicaPesquisa.jsp" scope="request" name="PessoaJuridicaForm">
+			<forward name="success" path="/admin/pessoa/pessoaJuridicaPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Pessoa/Juridica/Remover" input="/admin/pessoa/pessoaFisicaPesquisa.jsp" scope="request" name="PessoaJuridicaForm">
+			<forward name="success" path="/admin/Pessoa/Juridica/List.do"/>
+		</action>
+		
+		<action path="/admin/Pessoa/List" input="/admin/pessoa/pessoaSelecao.jsp" scope="request" name="PessoaForm">
+			<forward name="success" path="/admin/pessoa/pessoaSelecao.jsp"/>
+		</action>
+		
+		<!-- ACTIONS DE PESSOA -->
+		
+		<!-- ACTIONS DE LOCALIDADE -->
+		<action path="/admin/Localidade/Municipio/CarregarCadastro"  
+				input="/admin/localidade/municipioForm.jsp" scope="request" name="MunicipioForm">
+			<forward name="success" path="/admin/localidade/municipioForm.jsp"/>
+		</action>
+		
+		<action path="/admin/Localidade/Municipio/Salvar"  
+				input="/admin/localidade/municipioForm.jsp" scope="request" name="MunicipioForm">
+			<forward name="success" path="/admin/localidade/municipioPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Localidade/Municipio/CarregarPesquisa" 
+				input="/admin/localidade/municipioPesquisa.jsp" scope="request" name="MunicipioForm">
+			<forward name="success" path="/admin/localidade/municipioPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Localidade/Municipio/List" 
+				input="/admin/localidade/municipioPesquisa.jsp" scope="request" name="MunicipioForm">
+			<forward name="success" path="/admin/localidade/municipioPesquisa.jsp"/>
+		</action>
+		
+		<action path="/admin/Localidade/Municipio/Remover" 
+				input="/admin/localidade/municipioPesquisa.jsp" scope="request" name="MunicipioForm">
+			<forward name="success" path="/admin/localidade/municipioPesquisa.jsp"/>
+		</action>
+		
+		<!-- ACTIONS DE LOCALIDADE -->
+		
+		<!-- ACTIONS DE PROCESSO -->
+		<action path="/admin/Processo/CarregarCadastro"  
+				input="/admin/processo/processoForm.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/Cadastro"  
+				input="/admin/processo/processoForm.jsp" scope="request" name="ProcessoForm">
+			<forward name="success" path="/admin/Processo/CarregarCadastro.do"/>
+		</action>
+		
+		<action path="/admin/Processo/CarregarPesquisa" input="/admin/processo/processoPesquisa.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/Popup/CarregarSelecao" 
+				input="/admin/processo/processoSelecao.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/Popup/CarregarFrame"  
+				input="/admin/processo/processoFrame.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/CarregarComboOrgaoLReport" 
+				input="/admin/processo/processoListReport.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/CarregarComboOrgaoSelecao" 
+				input="/admin/processo/processoSelecao.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/CarregarListReport" 
+				input="/admin/processo/processoListReport.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/CarregarClienteListReport" 
+			input="/admin/processo/processoClienteListReport.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/List" input="/admin/processo/processoPesquisa.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/SelecaoList" input="/admin/processo/processoSelecao.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/Remover" input="/admin/processo/processoPesquisa.jsp" scope="request" name="ProcessoForm">
+			<forward name="sucess" path="/admin/Processo/List.do"/>	
+		</action>
+		
+		<action path="/admin/Processo/CarregarComboOrgaoCadastro" 
+				input="/admin/processo/processoForm.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/CarregarComboOrgaoPesquisa"  
+				input="/admin/processo/processoPesquisa.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/admin/Processo/Voltar" input="/admin/processo/processoPesquisa.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<!-- ACTIONS DE ACORDO-->
+		<action path="/admin/Processo/Taxa/List" input="/admin/processo/taxaGrid.jsp" scope="request" name="TaxaForm">
+		</action>
+		
+		<action path="/admin/Processo/Acordo/Taxa/List" input="/admin/processo/acordo/taxaGridAcordo.jsp" scope="request" name="TaxaForm">
+		</action>
+		
+		<action path="/admin/Processo/Taxa/Gerar" input="/admin/processo/taxaGrid.jsp" scope="request" name="TaxaForm">
+		</action>
+		
+		<action path="/admin/Processo/Taxa/CarregarCadastro" input="/admin/processo/taxaForm.jsp" scope="request" name="TaxaForm">
+		</action>
+
+		<action path="/admin/Processo/Taxa/Cadastro" input="/admin/processo/taxaForm.jsp" scope="request" name="TaxaForm">
+		</action>
+		
+		<action path="/admin/Processo/Taxa/Remover" input="/admin/processo/taxaGrid.jsp" scope="request" name="TaxaForm">
+		</action>
+		
+		<action path="/admin/Processo/Acordo/CarregarCadastro" input="/admin/processo/acordo/acordoForm.jsp" scope="request" name="AcordoForm">
+		</action>
+
+		<action path="/admin/Processo/Acordo/Cadastro" input="/admin/processo/acordo/acordoForm.jsp" scope="request" name="AcordoForm">
+		</action>
+		
+		<action path="/admin/Processo/Acordo/List" input="/admin/processo/acordo/acordoPesquisa.jsp" scope="request" name="AcordoForm">
+		</action>
+		
+		<action path="/admin/Processo/Acordo/Remover" input="/admin/processo/acordo/acordoPesquisa.jsp" scope="request" name="AcordoForm">
+		</action>
+		
+		<action path="/admin/Processo/Acordo/Parcela/CarregarCadastro" 
+			input="/admin/processo/acordo/parcelaAcordoForm.jsp" scope="request" name="ParcelaAcordoForm">
+		</action>
+		
+		<action path="/admin/Processo/Acordo/Parcela/RefreshGrid" 
+				input="/admin/processo/acordo/parcelaGrid.jsp" scope="request" name="ParcelaAcordoForm">
+		</action>
+
+		<action path="/admin/Processo/Acordo/Parcela/Cadastro"  input="/admin/processo/acordo/parcelaForm.jsp" scope="request" name="ParcelaAcordoForm">
+		</action>
+		
+		
+		<action path="/admin/Processo/Acordo/Parcela/CarregarFrame" 
+			input="/admin/processo/acordo/parcelaForm.jsp" scope="request" name="ParcelaAcordoForm">
+		</action>
+		
+		<action path="/admin/Processo/Acordo/Parcela/CorrigirValores" 
+				input="/admin/processo/acordo/pagamentoValoresForm.jsp" scope="request" name="ParcelaAcordoForm">
+		</action>
+		
+		<!-- DOCUMENTO -->
+		<action path="/admin/Documento/List" input="/admin/documento/documentoPesquisa.jsp" name="DocumentoForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/SelecaoList" input="/admin/documento/documentoSelecao.jsp" name="DocumentoForm" scope="request"> 
+		</action>
+		
+			
+		<action path="/admin/Documento/TreeFolder/List" input="/admin/documento/treeViewFolder.jsp" name="DiretorioForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/Diretorio/Carregar" input="/admin/documento/diretorioForm.jsp" name="DiretorioForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/Diretorio/Cadastro" input="/admin/documento/treeView.jsp" name="DiretorioForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/Diretorio/CadastroSelecao" input="/admin/documento/treeViewSelecao.jsp" name="DiretorioForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/Diretorio/Remover" input="/admin/documento/treeView.jsp" name="DiretorioForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/Diretorio/RemoverSelecao" input="/admin/documento/treeViewSelecao.jsp" name="DiretorioForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/Carregar" input="/admin/documento/documentoForm.jsp" name="DocumentoForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/Cadastro"  input="/admin/documento/treeView.jsp" name="DocumentoForm" scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/CadastroSelecao" input="/admin/documento/treeViewSelecao.jsp" name="DocumentoForm"
+				scope="request"> 
+		</action>
+		
+		<action path="/admin/Documento/Remover" input="/admin/documento/documentoPesquisa.jsp" name="DocumentoForm" scope="request"> 
+		</action>
+		
+		<!-- DOCUMENTO -->
+		
+		<action path="/main" type="org.apache.struts.actions.ForwardAction" parameter="/pages/main.jsp" />
+		
+		<!-- MODULO DE CLIENTE --> 
+		<action path="/adminCliente/Processo/CarregarClienteListReport" 
+			input="/adminCliente/processo/processoClienteListReport.jsp" scope="request" name="ProcessoForm">
+		</action>
+		
+		<action path="/adminCliente/Processo/List" input="/adminCliente/processo/processoPesquisa.jsp" scope="request" name="ProcessoForm">
+		</action>
+		<!-- MODULO DE CLIENTE -->
+
+    </action-mappings>
+	
+	<controller processorClass="org.springframework.web.struts.DelegatingRequestProcessor"/> 
+    
+    <message-resources parameter="ApplicationResources" null="false"/>
+    <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn" />
+    
+	<!-- controller processorClass="org.springframework.web.struts.DelegatingRequestProcessor"/>
+    <message-resources parameter="ApplicationResources"/>
+    <plug-in className="org.springframework.web.struts.ContextLoaderPlugIn"/-->
+</struts-config>

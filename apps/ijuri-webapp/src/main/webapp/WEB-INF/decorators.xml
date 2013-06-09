@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<decorators defaultdir="/decorators">
+	<!--  Any urls that are excluded will never be decorated by Sitemesh -->
+	<excludes>
+		<pattern>/nucleo/*</pattern>
+		<pattern>/js/*</pattern>
+		<pattern>/admin/CorrecaoMonetaria/IndiceReajuste/*</pattern>
+		<pattern>/admin/CorrecaoMonetario/IndiceReajuste/*</pattern>
+		<pattern>/admin/Processo/Popup/*</pattern>
+		<pattern>/admin/Processo/Taxa/*</pattern>
+		<pattern>/admin/Processo/Acordo/Taxa/*</pattern>
+		<pattern>/admin/Processo/ParteProcesso/List*</pattern>
+		<pattern>/admin/Processo/Andamento/List*</pattern>
+		<pattern>/admin/Processo/ParteProcesso/CarregarCadastro*</pattern>
+		<pattern>/admin/Pessoa/List*</pattern>
+		<pattern>/admin/processo/taxaGerarForm.jsp</pattern>
+		<pattern>/admin/Processo/Andamento/CarregarCadastro*</pattern>
+	</excludes>
+	
+	<decorator name="main-site" page="main-site.jsp">
+		<pattern>/site/*</pattern>
+	</decorator>
+	
+	<decorator name="main-admin" page="main-admin.jsp">
+		<pattern>/admin/*</pattern>
+	</decorator>
+</decorators>

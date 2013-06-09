@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>classpath:juriweb.cfg</value>
+		</property>
+	</bean>
+	
+	<bean id="acordoDelegate" class="br.com.vortice.ijuri.processo.acordo.cliente.AcordoDelegate">
+		<property name="acordoRN"><ref bean="acordoRN"/></property>
+		<property name="parcelaAcordoRN"><ref bean="parcelaAcordoRN"/></property>
+	</bean>
+	
+	<bean id="siteDelegate" class="br.com.vortice.ijuri.site.cliente.SiteDelegate">
+		<!-- property name="linkRN"><ref bean="linkRN"/></property-->
+		<property name="jurisprudenciaRN"><ref bean="jurisprudenciaRN"/></property>
+		<property name="parceiroRN"><ref bean="parceiroRN"/></property>
+	</bean>
+	
+	<!-- bean id="usuarioDelegate" class="br.com.vortice.ijuri.usuario.cliente.UsuarioDelegate">
+		<property name="usuarioRN"><ref bean="usuarioRN"/></property>
+	</bean-->
+	
+	<bean id="processoDelegate" class="br.com.vortice.ijuri.processo.cliente.ProcessoDelegate">
+		<property name="andamentoRN"><ref bean="andamentoRN"/></property>
+		<property name="processoRN"><ref bean="processoRN"/></property>
+		<property name="juizoRN"><ref bean="juizoRN"/></property>
+		<property name="orgaoJudiciarioRN"><ref bean="orgaoJudiciarioRN"/></property>
+		<property name="classeProcessoRN"><ref bean="classeProcessoRN"/></property>
+		<property name="comarcaRN"><ref bean="comarcaRN"/></property>
+		<property name="tipoAndamentoRN"><ref bean="tipoAndamentoRN"/></property>
+		<property name="taxaRN"><ref bean="taxaRN"/></property>
+	</bean>
+	
+	<bean id="pessoaDelegate" class="br.com.vortice.ijuri.pessoa.cliente.PessoaDelegate">
+		<property name="pessoaRN"><ref bean="pessoaRN"/></property>
+	</bean>
+	
+	<bean id="pagamentoDelegate" class="br.com.vortice.ijuri.pagamento.cliente.PagamentoDelegate">
+		<property name="bancoRN"><ref bean="bancoRN"/></property>
+	</bean>
+	
+	<bean id="correcaoMonetariaDelegate" class="br.com.vortice.ijuri.monetario.cliente.CorrecaoMonetariaDelegate">
+		<property name="correcaoMonetariaRN"><ref bean="correcaoMonetariaRN"/></property>
+		<property name="indiceReajusteRN"><ref bean="indiceReajusteRN"/></property>
+		<property name="periodoIndiceRN"><ref bean="periodoIndiceRN"/></property>
+	</bean>
+	
+	<bean id="documentoDelegate" class="br.com.vortice.ijuri.documento.cliente.web.DocumentoDelegate">
+		<property name="documentoRN"><ref bean="documentoRN"/></property>
+		<property name="diretorioRN"><ref bean="diretorioRN"/></property>
+	</bean>
+	
+	<bean id="localidadeDelegate" class="br.com.vortice.ijuri.localidade.cliente.LocalidadeDelegate">
+		<property name="municipioRN"><ref bean="municipioRN"/></property>
+		<property name="estadoRN"><ref bean="estadoRN"/></property>
+	</bean>
+	
+	<!-- bean id="usuarioRN" class="br.com.vortice.ijuri.usuario.rn.UsuarioRN">
+		<property name="usuarioDAO"><ref bean="usuarioDAO"/></property>
+	</bean-->
+	
+	<bean id="parceiroRN" class="br.com.vortice.ijuri.site.rn.ParceiroRN">
+		<property name="dao"><ref bean="parceiroDAO"/></property>
+	</bean>
+	
+	<!-- bean id="linkRN" class="br.com.vortice.ijuri.site.rn.LinkRN">
+		<property name="dao"><ref bean="linkDAO"/></property>
+	</bean-->
+	
+	<bean id="jurisprudenciaRN" class="br.com.vortice.ijuri.site.rn.JurisprudenciaRN">
+		<property name="dao"><ref bean="jurisprudenciaDAO"/></property>
+	</bean>
+	
+	<bean id="tipoAndamentoRN" class="br.com.vortice.ijuri.processo.rn.TipoAndamentoRN">
+		<property name="dao"><ref bean="tipoAndamentoDAO"/></property>
+	</bean>
+	
+	<bean id="taxaRN" class="br.com.vortice.ijuri.processo.rn.TaxaRN">
+		<property name="dao"><ref bean="taxaDAO"/></property>
+	</bean>
+	
+	<bean id="processoRN" class="br.com.vortice.ijuri.processo.rn.ProcessoRN">
+		<property name="processoDAO"><ref bean="processoDAO"/></property>
+		<property name="taxaDAO"><ref bean="taxaDAO"/></property>
+	</bean>
+	
+	<bean id="orgaoJudiciarioRN" class="br.com.vortice.ijuri.processo.rn.OrgaoJudiciarioRN">
+		<property name="dao"><ref bean="orgaoJudiciarioDAO"/></property>
+	</bean>
+	
+	<bean id="juizoRN" class="br.com.vortice.ijuri.processo.rn.JuizoRN">
+		<property name="dao"><ref bean="juizoDAO"/></property>
+	</bean>
+	
+	<bean id="comarcaRN" class="br.com.vortice.ijuri.processo.rn.ComarcaRN">
+		<property name="dao"><ref bean="comarcaDAO"/></property>
+	</bean>
+	
+	<bean id="classeProcessoRN" class="br.com.vortice.ijuri.processo.rn.ClasseProcessoRN">
+		<property name="dao"><ref bean="classeProcessoDAO"/></property>
+	</bean>
+	
+	<bean id="andamentoRN" class="br.com.vortice.ijuri.processo.rn.AndamentoRN">
+		<property name="andamentoDAO"><ref bean="andamentoDAO"/></property>
+		<property name="configuracaoDAO"><ref bean="configuracaoDAO"/></property>
+	</bean>
+	
+	<bean id="parcelaAcordoRN" class="br.com.vortice.ijuri.processo.acordo.rn.ParcelaAcordoRN">
+		<property name="dao"><ref bean="parcelaAcordoDAO"/></property>
+		<property name="chequeDAO"><ref bean="chequeDAO"/></property>
+		<property name="andamentoDAO"><ref bean="andamentoDAO"/></property>
+	</bean>
+	
+	<bean id="acordoRN" class="br.com.vortice.ijuri.processo.acordo.rn.AcordoRN">
+		<property name="dao"><ref bean="acordoDAO"/></property>
+		<property name="parcelaAcordoDAO"><ref bean="parcelaAcordoDAO"/></property>
+	</bean>
+	
+	<bean id="pessoaRN" class="br.com.vortice.ijuri.pessoa.rn.PessoaRN">
+		<property name="dao"><ref bean="pessoaDAO"/></property>
+		<property name="usuarioRN"><ref bean="usuarioRN"/></property>
+	</bean>
+	
+	<bean id="chequeRN" class="br.com.vortice.ijuri.pagamento.rn.ChequeRN">
+		<property name="dao"><ref bean="chequeDAO"/></property>
+	</bean>
+	
+	<bean id="bancoRN" class="br.com.vortice.ijuri.pagamento.rn.BancoRN">
+		<property name="dao"><ref bean="bancoDAO"/></property>
+	</bean>
+	
+	<bean id="periodoIndiceRN" class="br.com.vortice.ijuri.monetario.rn.PeriodoIndiceRN">
+		<property name="dao"><ref bean="periodoIndiceDAO"/></property>
+	</bean>
+	
+	<bean id="correcaoMonetariaRN" class="br.com.vortice.ijuri.monetario.rn.CorrecaoMonetariaRN">
+		<property name="indiceReajusteRN"><ref bean="indiceReajusteRN"/></property>
+	</bean>
+	
+	<bean id="indiceReajusteRN" class="br.com.vortice.ijuri.monetario.rn.IndiceReajusteRN">
+		<property name="dao"><ref bean="indiceReajusteDAO"/></property>
+		<property name="periodoIndiceDAO"><ref bean="periodoIndiceDAO"/></property>
+	</bean>
+	
+	<bean id="municipioRN" class="br.com.vortice.ijuri.localidade.rn.MunicipioRN">
+		<property name="dao"><ref bean="municipioDAO"/></property>
+	</bean>
+	
+	<bean id="estadoRN" class="br.com.vortice.ijuri.localidade.rn.EstadoRN">
+		<property name="dao"><ref bean="estadoDAO"/></property>
+	</bean>
+	
+	<bean id="documentoRN" class="br.com.vortice.ijuri.documento.rn.DocumentoRN">
+		<property name="documentoDAO"><ref bean="documentoDAO"/></property>
+	</bean>
+	
+	<bean id="diretorioRN" class="br.com.vortice.ijuri.documento.rn.DiretorioRN">
+		<property name="diretorioDAO"><ref bean="diretorioDAO"/></property>
+		<property name="documentoDAO"><ref bean="documentoDAO"/></property>
+	</bean>
+	
+	<!-- bean id="usuarioDAO" class="br.com.vortice.ijuri.usuario.dao.postgresql.UsuarioDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean-->
+	
+	<bean id="configuracaoDAO" class="br.com.vortice.ijuri.configuracao.dao.postgresql.ConfiguracaoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="parceiroDAO" class="br.com.vortice.ijuri.site.dao.postgresql.ParceiroDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<!-- bean id="linkDAO" class="br.com.vortice.ijuri.site.dao.postgresql.LinkDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean-->
+	
+	<bean id="jurisprudenciaDAO" class="br.com.vortice.ijuri.site.dao.postgresql.JurisprudenciaDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="tipoOrgaoDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.TipoOrgaoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="tipoAndamentoDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.TipoAndamentoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="taxaDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.TaxaDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="processoDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.ProcessoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="orgaoJudiciarioDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.OrgaoJudiciarioDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="juizoDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.JuizoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="comarcaDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.ComarcaDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="classeProcessoDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.ClasseProcessoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="andamentoDAO" class="br.com.vortice.ijuri.processo.dao.postgresql.AndamentoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="parcelaAcordoDAO" class="br.com.vortice.ijuri.processo.acordo.dao.postgresql.ParcelaAcordoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="acordoDAO" class="br.com.vortice.ijuri.processo.acordo.dao.postgresql.AcordoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="pessoaDAO" class="br.com.vortice.ijuri.pessoa.dao.postgresql.PessoaDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="pagamentoDAO" class="br.com.vortice.ijuri.pagamento.dao.postgresql.PagamentoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="chequeDAO" class="br.com.vortice.ijuri.pagamento.dao.postgresql.ChequeDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="bancoDAO" class="br.com.vortice.ijuri.pagamento.dao.postgresql.BancoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="periodoIndiceDAO" class="br.com.vortice.ijuri.monetario.dao.postgresql.PeriodoIndiceDAOPostgre">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="indiceReajusteDAO" class="br.com.vortice.ijuri.monetario.dao.postgresql.IndiceReajusteDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="municipioDAO" class="br.com.vortice.ijuri.localidade.dao.postgresql.MunicipioDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="estadoDAO" class="br.com.vortice.ijuri.localidade.dao.postgresql.EstadoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="documentoDAO" class="br.com.vortice.ijuri.documento.dao.postgresql.DocumentoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="diretorioDAO" class="br.com.vortice.ijuri.documento.dao.postgresql.DiretorioDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<!-- MODULO DE SEGURANCA -->
+	<bean id="segurancaDelegate" class="com.vortice.seguranca.abstracao.cliente.SegurancaDelegateRN">
+		<property name="usuarioRN"><ref bean="usuarioRN"/></property>
+		<property name="perfilRN"><ref bean="perfilRN"/></property>
+		<property name="funcaoRN"><ref bean="funcaoRN"/></property>
+		<property name="funcionalidadeRN"><ref bean="funcionalidadeRN"/></property>
+		<property name="linkRN"><ref bean="linkRN"/></property>
+	</bean>
+	
+	<bean id="usuarioRN" class="com.vortice.seguranca.rn.UsuarioRN">
+		<property name="dao"><ref bean="usuarioDAO"/></property>
+		<property name="funcionalidadeDAO"><ref bean="funcionalidadeDAO"/></property>
+	</bean>
+	
+	<bean id="perfilRN" class="com.vortice.seguranca.rn.PerfilRN">
+		<property name="dao"><ref bean="perfilDAO"/></property>
+	</bean>
+	
+	<bean id="funcaoRN" class="com.vortice.seguranca.rn.FuncaoRN">
+		<property name="dao"><ref bean="funcaoDAO"/></property>
+	</bean>
+	
+	<bean id="funcionalidadeRN" class="com.vortice.seguranca.rn.FuncionalidadeRN">
+		<property name="dao"><ref bean="funcionalidadeDAO"/></property>
+	</bean>
+	
+	<bean id="linkRN" class="com.vortice.seguranca.rn.LinkRN">
+		<property name="dao"><ref bean="linkDAO"/></property>
+	</bean>
+	
+	<bean id="usuarioDAO" class="com.vortice.seguranca.dao.postgresql.UsuarioDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="perfilDAO" class="com.vortice.seguranca.dao.postgresql.PerfilDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="funcaoDAO" class="com.vortice.seguranca.dao.postgresql.FuncaoDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="funcionalidadeDAO" class="com.vortice.seguranca.dao.postgresql.FuncionalidadeDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	
+	<bean id="linkDAO" class="com.vortice.seguranca.dao.postgresql.LinkDAOPostgreSql">
+		<property name="dataSource"><ref bean="dataSource"/></property>
+	</bean>
+	<!-- MODULO DE SEGURANCA -->
+	
+	<!-- CONEXAO COM O BANCO DE DADOS -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName" value="org.postgresql.Driver" />
+		<property name="url" value="jdbc:postgresql://localhost:5432/ijuri" />
+		<property name="username" value="postgres" />
+		<property name="password" value="postgres" />
+		<!-- property name="url" value="jdbc:postgresql://localhost:5432/juriweb_demo" />
+		<property name="username" value="demo" />
+		<property name="password" value="juriwebdb" /-->
+	</bean>
+	
+</beans>

@@ -1,0 +1,27 @@
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN"
+    "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+    
+<dwr>
+	<allow>
+		<create creator="spring" javascript="PessoaRN">
+			<param name="beanName" value="pessoaRN"/>
+		</create>
+		
+		<create creator="spring" javascript="PerfilRN">
+			<param name="beanName" value="perfilRN"/>
+		</create>
+		
+		<convert converter="bean" match="com.vortice.seguranca.vo.UsuarioVO">
+			<param name="include" value="codigo, login, perfil"></param>
+		</convert>
+	
+		<convert converter="bean" match="com.vortice.seguranca.vo.PerfilVO">
+			<param name="include" value="codigo, nome"></param>
+		</convert>
+		
+		<convert converter="bean" match="br.com.vortice.ijuri.pessoa.PessoaVO">
+			<param name="include" value="codigo, nome, email, usuario"></param>
+		</convert>
+	</allow>
+</dwr>

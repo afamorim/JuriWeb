@@ -1,0 +1,116 @@
+body {
+	font: 11px Arial;
+	color: #000000;
+	background: #669999 url(../images/site/BgGeral.jpg) repeat-x 0 0;
+	margin: 0px;
+	padding: 0px;
+}
+.alt {
+	display: none;
+}
+br {
+	clear: left;
+}
+/*Topo |-----------------------------------------------------------------*/
+#Topo {
+	width: 760px;
+	height: 292px;
+	background: url(../images/site/BgTopo.jpg) no-repeat 0 0;
+	position: relative;
+	float: left;
+}
+#Topo a {
+	width: 193px;
+	height: 89px;
+	background: url(../images/site/LogoJuriWeb.gif) no-repeat 0 0;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	left: 25px;
+	top: 7px;
+	z-index: auto;
+}
+/*-----------------------------------------------------------------------*/
+
+/*Menu |-----------------------------------------------------------------*/
+#Menu {
+	color: #FFFFFF;
+	width: 750px;
+	height: 20px;
+	padding: 10px 0px 0px 10px;
+	position: relative;
+	float: left;
+}
+#Menu a {
+	font: 11px Arial;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#Menu a:hover {
+	text-decoration: underline;
+}
+/*-----------------------------------------------------------------------*/
+
+/*Conteudo |-----------------------------------------------------------------*/
+#Conteudo {
+	font: 1.0em Arial;
+	color: #FFFFFF;
+	width: auto;
+	height: auto;
+	text-align: left;
+	padding: 10px;
+	table-layout: auto;
+	float: left;
+}
+#Conteudo h2 {
+	font: 2.6em Arial;
+	margin: 0px;
+	padding: 0px;
+}
+#Conteudo p {
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+}
+/*-----------------------------------------------------------------------*/
+
+/*Formul�rio |-----------------------------------------------------------*/
+form {
+	margin: 10px;
+	padding: 0px;
+}
+fieldset {
+	width: 760px;
+	border: 2px solid #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+}
+legend {
+	font-size: 1.5em;
+	margin: 0px 0px 0px 10px;
+}
+label {
+	font-size: 1.2em;
+	width: 100px;
+	text-align: right;
+	float: left;
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+	float: left;
+}
+input, textarea, select {
+	font: 1.0em Arial;
+	border: 1px solid #FFFFFF;
+	margin: 5px 0px 0px 5px;
+	padding: 0px;
+	float: left;
+}
+.botao {
+	font: 1.0em Arial;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin: 5px 0px 0px 5px;
+	background: #3B2214;
+	padding: 2px 5px 2px 5px;
+	float: left;
+}
+/*-----------------------------------------------------------------------*/

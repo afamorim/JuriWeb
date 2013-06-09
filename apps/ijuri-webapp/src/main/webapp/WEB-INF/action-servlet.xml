@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="byName">
+	<bean name="/Site/Link/CarregarAll" class="br.com.vortice.ijuri.site.cliente.web.action.LinkConsultarAC" />	
+	<bean name="/admin/Site/Link/CarregarCadastro" class="br.com.vortice.ijuri.site.cliente.web.action.LinkCarregarAC" />
+	<bean name="/admin/Site/Link/CarregarPesquisa" class="br.com.vortice.ijuri.site.cliente.web.action.LinkCarregarAC" />
+	<bean name="/admin/Site/Link/Salvar" class="br.com.vortice.ijuri.site.cliente.web.action.LinkSalvarAC" />
+	<bean name="/admin/Site/Link/Remover" class="br.com.vortice.ijuri.site.cliente.web.action.LinkRemoverAC" />
+	<bean name="/admin/Site/Link/Consultar" class="br.com.vortice.ijuri.site.cliente.web.action.LinkConsultarAC" />
+	
+	<bean name="/Site/Jurisprudencia/Listar" class="br.com.vortice.ijuri.site.cliente.web.action.JurisprudenciaPesquisarAC" />
+	<bean name="/admin/Site/Jurisprudencia/CarregarCadastro" class="br.com.vortice.ijuri.site.cliente.web.action.JurisprudenciaCarregarAC" />
+	<bean name="/admin/Site/Jurisprudencia/CarregarPesquisa" class="br.com.vortice.ijuri.site.cliente.web.action.JurisprudenciaCarregarAC" />
+	<bean name="/admin/Site/Jurisprudencia/Salvar" class="br.com.vortice.ijuri.site.cliente.web.action.JurisprudenciaSalvarAC" />
+	<bean name="/admin/Site/Jurisprudencia/Remover" class="br.com.vortice.ijuri.site.cliente.web.action.JurisprudenciaRemoverAC" />
+	<bean name="/admin/Site/Jurisprudencia/Pesquisar" class="br.com.vortice.ijuri.site.cliente.web.action.JurisprudenciaPesquisarAC" />
+	
+	<bean name="/admin/CorrecaoMonetaria/IndiceReajuste/Detalhar"			class="br.com.vortice.ijuri.monetario.cliente.action.IndiceReajusteCarregarAC" />
+	<bean name="/admin/CorrecaoMonetaria/IndiceReajuste/CarregarCadastro"	class="br.com.vortice.ijuri.monetario.cliente.action.IndiceReajusteCarregarAC" />
+	<bean name="/admin/CorrecaoMonetaria/IndiceReajuste/CarregarImportacao"	class="br.com.vortice.ijuri.monetario.cliente.action.IndiceReajusteCarregarImportacaoAC" />
+	<bean name="/admin/CorrecaoMonetaria/IndiceReajuste/Importacao"			class="br.com.vortice.ijuri.monetario.cliente.action.IndiceReajusteImportacaoAC" />
+	<bean name="/admin/CorrecaoMonetaria/IndiceReajuste/Salvar"				class="br.com.vortice.ijuri.monetario.cliente.action.IndiceReajusteSalvarAC" />
+	<bean name="/admin/CorrecaoMonetaria/IndiceReajuste/Remover"			class="br.com.vortice.ijuri.monetario.cliente.action.IndiceReajusteRemoverAC" />
+	<bean name="/admin/CorrecaoMonetario/IndiceReajuste/Consultar"			class="br.com.vortice.ijuri.monetario.cliente.action.IndiceReajusteConsultarAC" />
+	
+	<bean name="/admin/Monetario/PeriodoIndiceReajuste/CarregarCadastro"	class="br.com.vortice.ijuri.monetario.cliente.action.PeriodoIndiceCarregarAC" />
+	<bean name="/admin/Monetario/PeriodoIndiceReajuste/Salvar"				class="br.com.vortice.ijuri.monetario.cliente.action.PeriodoIndiceSalvarAC" />
+	<bean name="/admin/Monetario/PeriodoIndiceReajuste/Remover"				class="br.com.vortice.ijuri.monetario.cliente.action.PeriodoIndiceRemoverAC" />
+	<bean name="/admin/Monetario/PeriodoIndiceReajuste/Consultar" 			class="br.com.vortice.ijuri.monetario.cliente.action.PeriodoIndiceConsultarAC" />
+	
+	<bean name="/Site/PropostaOnLine/Carregar" class="br.com.vortice.ijuri.site.cliente.web.action.PropostaOnLineCarregarAC" />
+	<bean name="/Site/PropostaOnLinte/Enviar" class="br.com.vortice.ijuri.site.cliente.web.action.PropostaOnLineEnviarAC" />
+	
+	<bean name="/Usuario/Autenticar"	class="br.com.vortice.ijuri.usuario.cliente.web.action.UsuarioAutenticarAC">
+	</bean>
+	<bean name="/Usuario/Logout" 		class="br.com.vortice.ijuri.usuario.cliente.web.action.UsuarioLogoutAC" />
+	
+	<bean name="/admin/Processo/Andamento/CarregarCadastro"	class="br.com.vortice.ijuri.processo.cliente.web.action.AndamentoCarregarAC" />
+	<bean name="/admin/Processo/Andamento/Salvar"			class="br.com.vortice.ijuri.processo.cliente.web.action.AndamentoSalvarAC" />
+	<bean name="/admin/Processo/Andamento/List" 			class="br.com.vortice.ijuri.processo.cliente.web.action.AndamentoListAC" />
+	<bean name="/admin/Processo/Andamento/Remover" 			class="br.com.vortice.ijuri.processo.cliente.web.action.AndamentoRemoverAC" />
+	
+	<bean name="/admin/Processo/TipoAndamento/CarregarCadastro"	class="br.com.vortice.ijuri.processo.cliente.web.action.TipoAndamentoCarregarAC" />
+	<bean name="/admin/Processo/TipoAndamento/CarregarPesquisa" class="br.com.vortice.ijuri.processo.cliente.web.action.TipoAndamentoCarregarAC" />
+	<bean name="/admin/Processo/TipoAndamento/Salvar" 			class="br.com.vortice.ijuri.processo.cliente.web.action.TipoAndamentoFormSalvarAC" />
+	<bean name="/admin/Processo/TipoAndamento/List" 			class="br.com.vortice.ijuri.processo.cliente.web.action.TipoAndamentoListAC" />
+	<bean name="/admin/Processo/TipoAndamento/Remover" 			class="br.com.vortice.ijuri.processo.cliente.web.action.TipoAndamentoRemoverAC" />
+	
+	<bean name="/admin/Processo/Comarca/CarregarCadastro"	class="br.com.vortice.ijuri.processo.cliente.web.action.ComarcaCarregarAC" />
+	<bean name="/admin/Processo/Comarca/CarregarPesquisa"	class="br.com.vortice.ijuri.processo.cliente.web.action.ComarcaCarregarAC" />
+	<bean name="/admin/Processo/Comarca/Salvar" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ComarcaFormSalvarAC" />
+	<bean name="/admin/Processo/Comarca/List" 				class="br.com.vortice.ijuri.processo.cliente.web.action.ComarcaListAC" />
+	<bean name="/admin/Processo/Comarca/Remover" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ComarcaRemoverAC" />
+	
+	<bean name="/admin/Processo/Juizo/CarregarPesquisa" class="br.com.vortice.ijuri.processo.cliente.web.action.JuizoCarregarAC" />
+	<bean name="/admin/Processo/Juizo/CarregarCadastro" class="br.com.vortice.ijuri.processo.cliente.web.action.JuizoCarregarAC" />
+	<bean name="/admin/Processo/Juizo/Cadastro" 		class="br.com.vortice.ijuri.processo.cliente.web.action.JuizoCadastroAC" />
+	<bean name="/admin/Processo/Juizo/Alteracao" 		class="br.com.vortice.ijuri.processo.cliente.web.action.JuizoCadastroAC" />
+	<bean name="/admin/Processo/Juizo/List" 			class="br.com.vortice.ijuri.processo.cliente.web.action.JuizoListAC" />
+	<bean name="/admin/Processo/Juizo/Remover" 			class="br.com.vortice.ijuri.processo.cliente.web.action.JuizoRemoverAC" />
+	
+	<bean name="/admin/Processo/ClasseProcesso/CarregarCadastro"	class="br.com.vortice.ijuri.processo.cliente.web.action.ClasseProcessoCarregarAC" />
+	<bean name="/admin/Processo/ClasseProcesso/CarregarPesquisa" 	class="br.com.vortice.ijuri.processo.cliente.web.action.ClasseProcessoCarregarAC" />
+	<bean name="/admin/Processo/ClasseProcesso/Cadastro" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ClasseProcessoCadastroAC" />
+	<bean name="/admin/Processo/ClasseProcesso/Alteracao" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ClasseProcessoCadastroAC" />
+	<bean name="/admin/Processo/ClasseProcesso/List" 				class="br.com.vortice.ijuri.processo.cliente.web.action.ClasseProcessoListAC" />
+	<bean name="/admin/Processo/ClasseProcesso/Remover" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ClasseProcessoRemoverAC" />
+	
+	<bean name="/admin/Processo/ParteProcesso/List" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ParteProcessoListAC" />
+	<bean name="/admin/Processo/ParteProcesso/Remover" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ParteProcessoRemoverAC" />
+	<bean name="/admin/Processo/ParteProcesso/CarregarCadastro" class="br.com.vortice.ijuri.processo.cliente.web.action.ParteProcessoCarregarAC" />
+	<bean name="/admin/Processo/ParteProcesso/Cadastro" 		class="br.com.vortice.ijuri.processo.cliente.web.action.ParteProcessoCadastroAC" />
+	<bean name="/admin/Processo/ParteProcesso/Alteracao" 		class="br.com.vortice.ijuri.processo.cliente.web.action.ParteProcessoAlteracaoAC" />
+	
+	<bean name="/admin/Processo/Orgao/CarregarCadastro" 		class="br.com.vortice.ijuri.processo.cliente.web.action.OrgaoJudiciarioCarregarAC" />
+	<bean name="/admin/Processo/Orgao/CarregarPesquisa" 		class="br.com.vortice.ijuri.processo.cliente.web.action.OrgaoJudiciarioCarregarAC" />
+	<bean name="/admin/Processo/Orgao/Cadastro"					class="br.com.vortice.ijuri.processo.cliente.web.action.OrgaoJudiciarioCadastroAC" />
+	<bean name="/admin/Processo/Orgao/List" 					class="br.com.vortice.ijuri.processo.cliente.web.action.OrgaoJudiciarioListAC" />
+	<bean name="/admin/Processo/Orgao/Remover" 					class="br.com.vortice.ijuri.processo.cliente.web.action.OrgaoJudiciarioRemoverAC" />
+	
+	<bean name="/admin/Pessoa/Fisica/CarregarCadastro" 		class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaFisicaCarregarAC" />
+	<bean name="/admin/Pessoa/Fisica/Cadastro" 				class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaFisicaFormSalvarAC" />
+	<bean name="/admin/Pessoa/Fisica/CarregarPesquisa" 		class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaFisicaCarregarAC" />
+	<bean name="/admin/Pessoa/Fisica/List" 					class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaFisicaPesquisarAC" />
+	<bean name="/admin/Pessoa/Fisica/Remover" 				class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaFisicaRemoverAC" />
+	<bean name="/admin/Pessoa/Juridica/CarregarCadastro"	class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaJuridicaCarregarAC" />
+	<bean name="/admin/Pessoa/Juridica/Cadastro"			class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaJuridicaFormSalvarAC" />
+	<bean name="/admin/Pessoa/Juridica/CarregarPesquisa" 	class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaJuridicaCarregarAC" />
+	<bean name="/admin/Pessoa/Juridica/List" 				class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaJuridicaPesquisarAC" />
+	<bean name="/admin/Pessoa/Juridica/Remover" 			class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaJuridicaRemoverAC" />
+	<bean name="/admin/Pessoa/List" 						class="br.com.vortice.ijuri.pessoa.cliente.web.action.PessoaListAC" />
+	
+	<bean name="/admin/Localidade/Municipio/CarregarCadastro"	class="br.com.vortice.ijuri.localidade.cliente.web.action.MunicipioCarregarAC" />
+	<bean name="/admin/Localidade/Municipio/Salvar" 			class="br.com.vortice.ijuri.localidade.cliente.web.action.MunicipioFormSalvarAC" />
+	<bean name="/admin/Localidade/Municipio/CarregarPesquisa" 	class="br.com.vortice.ijuri.localidade.cliente.web.action.MunicipioCarregarAC" />
+	<bean name="/admin/Localidade/Municipio/List" 				class="br.com.vortice.ijuri.localidade.cliente.web.action.MunicipioListAC" />
+	<bean name="/admin/Localidade/Municipio/Remover" 			class="br.com.vortice.ijuri.localidade.cliente.web.action.MunicipioRemoverAC" />
+	
+	<bean name="/admin/Processo/CarregarCadastro" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarAC" />
+	<bean name="/admin/Processo/Cadastro" 					class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCadastroAC" />
+	<bean name="/admin/Processo/CarregarPesquisa" 			class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarAC" />
+	<bean name="/admin/Processo/Popup/CarregarSelecao" 		class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarAC" />
+	<bean name="/admin/Processo/Popup/CarregarFrame"		class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarFrameAC" />
+	<bean name="/admin/Processo/CarregarComboOrgaoLReport" 	class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarComboOrgaoAC" />
+	<bean name="/admin/Processo/CarregarComboOrgaoSelecao" 	class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarComboOrgaoAC" />
+	<bean name="/admin/Processo/CarregarListReport" 		class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarAC" />
+	<bean name="/admin/Processo/CarregarClienteListReport" 	class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarAC" />
+	<bean name="/admin/Processo/List" 						class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoListAC" />
+	<bean name="/admin/Processo/SelecaoList" 				class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoListAC" />
+	<bean name="/admin/Processo/Remover" 					class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoRemoverAC" />
+	<bean name="/admin/Processo/CarregarComboOrgaoCadastro"	class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarComboOrgaoAC" />
+	<bean name="/admin/Processo/CarregarComboOrgaoPesquisa"	class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoCarregarComboOrgaoAC" ></bean>
+	<bean name="/admin/Processo/Voltar" 					class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoVoltarAC" />
+	
+	<bean name="/admin/Processo/Taxa/List" 					class="br.com.vortice.ijuri.processo.cliente.web.action.TaxaListAC" />
+	<bean name="/admin/Processo/Acordo/Taxa/List" 			class="br.com.vortice.ijuri.processo.cliente.web.action.TaxaListAC" />
+	<bean name="/admin/Processo/Taxa/Gerar" 				class="br.com.vortice.ijuri.processo.cliente.web.action.TaxaGerarAC" />
+	<bean name="/admin/Processo/Taxa/CarregarCadastro" 		class="br.com.vortice.ijuri.processo.cliente.web.action.TaxaCarregarCadastroAC" />
+	<bean name="/admin/Processo/Taxa/Cadastro" 				class="br.com.vortice.ijuri.processo.cliente.web.action.TaxaCadastroAC" />
+	<bean name="/admin/Processo/Taxa/Remover" 				class="br.com.vortice.ijuri.processo.cliente.web.action.TaxaRemoverAC" />
+	
+	<bean name="/admin/Processo/Acordo/CarregarCadastro"	class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.AcordoCarregarCadastroAC" />
+	<bean name="/admin/Processo/Acordo/Cadastro" 			class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.AcordoCadastroAC" />
+	<bean name="/admin/Processo/Acordo/List" 				class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.AcordoListAC" />
+	<bean name="/admin/Processo/Acordo/Remover" 			class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.AcordoRemoverAC" />
+	
+	<bean name="/admin/Processo/Acordo/Parcela/CarregarCadastro" 	class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.ParcelaAcordoCarregarCadastroAC" />
+	<bean name="/admin/Processo/Acordo/Parcela/RefreshGrid" 		class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.ParcelaAcordoRefreshGridAC" />
+	<bean name="/admin/Processo/Acordo/Parcela/Cadastro" 			class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.ParcelaAcordoCadastroAC" />
+	<bean name="/admin/Processo/Acordo/Parcela/CarregarFrame" 		class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.ParcelaAcordoCarregarFrameAC" />
+	<bean name="/admin/Processo/Acordo/Parcela/CorrigirValores" 	class="br.com.vortice.ijuri.processo.acordo.cliente.web.action.ParcelaAcordoCorrigirValoresAC" />
+	
+	<bean name="/admin/Documento/List" 	class="br.com.vortice.ijuri.documento.cliente.web.action.DocumentoListAC" />
+	<bean name="/admin/Documento/SelecaoList" 	class="br.com.vortice.ijuri.documento.cliente.web.action.DocumentoListAC" />
+	
+	<bean name="/admin/Documento/TreeFolder/List" 	class="br.com.vortice.ijuri.documento.cliente.web.action.DiretorioListAC" />
+	
+	<bean name="/admin/Documento/Diretorio/Carregar" 			class="br.com.vortice.ijuri.documento.cliente.web.action.DiretorioCarregarAC" />
+	<bean name="/admin/Documento/Diretorio/Cadastro" 			class="br.com.vortice.ijuri.documento.cliente.web.action.DiretorioCadastroAC" />
+	<bean name="/admin/Documento/Diretorio/CadastroSelecao" 	class="br.com.vortice.ijuri.documento.cliente.web.action.DiretorioCadastroAC" />
+	<bean name="/admin/Documento/Diretorio/Remover" 			class="br.com.vortice.ijuri.documento.cliente.web.action.DiretorioRemoverAC" />
+	<bean name="/admin/Documento/Diretorio/RemoverSelecao" 		class="br.com.vortice.ijuri.documento.cliente.web.action.DiretorioRemoverAC" />
+	
+	<bean name="/admin/Documento/Carrega" 			class="br.com.vortice.ijuri.documento.cliente.web.action.DocumentoCarregarAC" />
+	<bean name="/admin/Documento/Cadastro" 			class="br.com.vortice.ijuri.documento.cliente.web.action.DocumentoCadastroAC" />
+	<bean name="/admin/Documento/CadastroSelecao" 	class="br.com.vortice.ijuri.documento.cliente.web.action.DocumentoCadastroAC" />
+	<bean name="/admin/Documento/Remover" 			class="br.com.vortice.ijuri.documento.cliente.web.action.DocumentoRemoverAC" />
+	
+	<!-- MODULO DE CLIENTE -->
+	<bean name="/adminCliente/Processo/CarregarClienteListReport" 	class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoClienteCarregarAC" />	
+	<bean name="/adminCliente/Processo/List" 						class="br.com.vortice.ijuri.processo.cliente.web.action.ProcessoListAC" />
+</beans>

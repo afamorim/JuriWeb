@@ -1,0 +1,182 @@
+/*CSS do Sistema |--------------------------------------------------------------------*/
+body {
+	font-family: Arial;
+	font-size: 11px;
+	/*color: #466868;
+	background: url(../images/sistema/Bg01.gif) #FFF repeat-y 0 0;*/
+	margin: 0px;
+	padding: 0px;
+
+}
+.alt {
+	display: none;
+}
+br {
+	clear: left;
+}
+/*Geral |-------------------------------------------------------------------------*/
+#Geral { /*width: 990px; */height: auto; margin: 0px; padding: 0px; position: relative; }
+
+
+/*-----------------------------------------------------------------------*/
+/*boas vindas do sistema |---------------------------------------------------------*/
+.log {
+	color:#333;
+	width: 145px;
+	height: 15px;
+	position: absolute;
+	z-index: 9999;
+	left: 33px;
+	top: 90px;	
+}
+.log strong { text-decoration: underline; }
+
+
+/*Conteudo |-------------------------------------------------------------*/
+#ConteudoSistema {
+	/*width: 740px;*/
+	float: left;
+	/*margin: 10px;*/
+	border: solid 1px #C3D6D6;
+}
+#ConteudoSistema h1 {
+	font: 20px "Trebuchet MS";
+	text-align: right;
+	color: #466868;
+	background: #F3F7F7;
+	height: 30px;
+	width: 99%;
+	margin: 0px 0px 10px 0px;
+	padding: 0 1% 0 0;
+}
+#ConteudoSistema fieldset {
+	color: #000;
+	/*width: 700px;*/
+	background: #E7EFEF;
+	border: 2px solid #466868;
+	margin: 0 0 8px 13px;  
+	padding: 5px 5px 0px 5px;
+	_padding: 0px 5px 8px 5px;
+	*padding: 0px 5px 8px 5px;
+}
+#ConteudoSistema fieldset {
+	_background: url(../images/sistema/bgFieldset.gif) repeat-x 1px 17px;
+	*background: url(../images/sistema/bgFieldset.gif) repeat-x 1px 17px;		
+}
+
+#ConteudoSistema fieldset legend {
+	font: bold 11px Verdana;
+	color: #FFF;
+	background: #466868;
+	margin: 5px 0px 27px 5px;
+	_margin: 5px 0px 27px 0px;
+	*margin: 5px 0px 27px 0px;
+	padding: 5px;
+}
+#ConteudoSistema label {
+	width: 100px;
+	text-align: right;
+	float: left;
+	margin: 0px 0px 5px 0px;
+	padding: 0px;
+}
+#ConteudoSistema .input02 {
+	margin: 0 0 0 5px;
+	padding: 0px;
+}
+#ConteudoSistema .label02 { 
+	width: auto; 
+	margin: 0 0 0 20px; 
+	padding: 0 0 0 5px; 	 
+}
+
+#ConteudoSistema input, #ConteudoSistema textarea, #ConteudoSistema select {
+	font: 1.0em Arial;
+	color: #000;
+	margin: 0px 0px 8px 5px;
+	padding: 0px;
+	float: left;
+}
+
+#ConteudoSistema table { 
+	/*width: 715px;*/ 
+	/*margin: 0 0 0 13px;*/
+	text-align: center; 
+	background: #ABC6C6;	
+}
+#ConteudoSistema table th {
+	font: bold 1.0em Arial;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #466868;
+	background: #C3D6D6;
+	height: 29px;	
+}
+#ConteudoSistema table tr {
+	margin:0px;
+	padding:0px;
+	height: 25px;
+}
+
+#ConteudoSistema h1.titulo {
+	font: 20px "Trebuchet MS";
+	text-align: center;
+	color: #FFF;
+	background: #466868;
+	height: 30px;
+	width: 715px;
+	margin: 10px 0 1px 13px;
+	padding: 0px;
+}
+#ConteudoSistema td.tdLeft { 
+	text-align: left; 
+	padding-left: 10px; 
+}
+#ConteudoSistema td.tdCenter { 
+	margin: 0 0 0 30%;
+	float: none; 
+}
+#ConteudoSistema .space {
+	margin: 5px 10px 10px 10px;
+} 
+#ConteudoSistema .td01, #ConteudoSistema .td02 { 
+	font-family: Arial;
+	font-size: 11px;
+	background: #FFF;
+}
+#ConteudoSistema .botao {
+	font: 1.0em Arial;
+	color: #466868;
+	text-decoration: none;
+	background: #FFF;
+	margin: 0px 0px 5px 5px;	
+	padding: 0px 5px 0px 5px;
+	border: 1px solid #466868;
+}
+#ConteudoSistema a.link03 {
+	text-decoration: none;
+	color:#900;
+}
+#ConteudoSistema a:hover.link03 {
+	text-decoration: underline;
+}
+#ConteudoSistema a {
+	text-decoration: none;
+	color:#466868;
+}
+#ConteudoSistema a:hover {
+	text-decoration: underline;
+}
+#ConteudoSistema .coluna01 { 
+	width: 50%;
+	margin: 0 0 0 20px;
+	float: left; 
+}
+#ConteudoSistema .coluna02 { 
+	width: 40%;
+	margin: 0 0 0 10px;
+	float: left; 
+}
+
+/*-----------------------------------------------------------------------*/
+br { clear: left; }

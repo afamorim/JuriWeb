@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import br.com.vortice.ijuri.abstracao.ValueObject;
+import br.com.vortice.ijuri.core.abstracao.ValueObject;
 
 public class ReportType extends ValueObject {
     public static final int REPORT_TYPE_PDF = 1;

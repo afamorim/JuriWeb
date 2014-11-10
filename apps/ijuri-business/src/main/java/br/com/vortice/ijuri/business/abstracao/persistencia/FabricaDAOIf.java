@@ -4,30 +4,30 @@
  */
 package br.com.vortice.ijuri.business.abstracao.persistencia;
 
-import br.com.vortice.ijuri.documento.dao.DiretorioDAOIf;
-import br.com.vortice.ijuri.documento.dao.DocumentoDAOIf;
-import br.com.vortice.ijuri.localidade.dao.EstadoDAOIf;
-import br.com.vortice.ijuri.localidade.dao.MunicipioDAOIf;
-import br.com.vortice.ijuri.monetario.dao.IndiceReajusteDAOIf;
-import br.com.vortice.ijuri.monetario.dao.PeriodoIndiceDAOIf;
-import br.com.vortice.ijuri.pagamento.dao.BancoDAOIf;
-import br.com.vortice.ijuri.pagamento.dao.ChequeDAOIf;
-import br.com.vortice.ijuri.pessoa.dao.PessoaDAOIf;
-import br.com.vortice.ijuri.processo.acordo.dao.AcordoDAOIf;
-import br.com.vortice.ijuri.processo.acordo.dao.ParcelaAcordoDAOIf;
-import br.com.vortice.ijuri.processo.dao.AndamentoDAOIf;
-import br.com.vortice.ijuri.processo.dao.ClasseProcessoDAOIf;
-import br.com.vortice.ijuri.processo.dao.ComarcaDAOIf;
-import br.com.vortice.ijuri.processo.dao.JuizoDAOIf;
-import br.com.vortice.ijuri.processo.dao.OrgaoJudiciarioDAOIf;
-import br.com.vortice.ijuri.processo.dao.ProcessoDAOIf;
-import br.com.vortice.ijuri.processo.dao.TaxaDAOIf;
-import br.com.vortice.ijuri.processo.dao.TipoAndamentoDAOIf;
-import br.com.vortice.ijuri.processo.dao.TipoOrgaoDAOIf;
-import br.com.vortice.ijuri.site.dao.LinkDAOIf;
-import br.com.vortice.ijuri.site.dao.JurisprudenciaDAOIf;
-import br.com.vortice.ijuri.site.dao.ParceiroDAOIf;
-import br.com.vortice.ijuri.usuario.dao.UsuarioDAOIf;
+import br.com.vortice.ijuri.business.documento.rn.dao.DiretorioDAOIf;
+import br.com.vortice.ijuri.business.documento.rn.dao.DocumentoDAOIf;
+import br.com.vortice.ijuri.business.localidade.dao.EstadoDAOIf;
+import br.com.vortice.ijuri.business.localidade.dao.MunicipioDAOIf;
+import br.com.vortice.ijuri.business.monetario.dao.IndiceReajusteDAOIf;
+import br.com.vortice.ijuri.business.monetario.dao.PeriodoIndiceDAOIf;
+import br.com.vortice.ijuri.business.pagamento.dao.BancoDAOIf;
+import br.com.vortice.ijuri.business.pagamento.dao.ChequeDAOIf;
+import br.com.vortice.ijuri.business.pessoa.dao.PessoaDAOIf;
+import br.com.vortice.ijuri.business.processo.acordo.dao.AcordoDAOIf;
+import br.com.vortice.ijuri.business.processo.acordo.dao.ParcelaAcordoDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.AndamentoDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.ClasseProcessoDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.ComarcaDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.JuizoDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.OrgaoJudiciarioDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.ProcessoDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.TaxaDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.TipoAndamentoDAOIf;
+import br.com.vortice.ijuri.business.processo.dao.TipoOrgaoDAOIf;
+import br.com.vortice.ijuri.business.site.dao.JurisprudenciaDAOIf;
+import br.com.vortice.ijuri.business.site.dao.LinkDAOIf;
+import br.com.vortice.ijuri.business.site.dao.ParceiroDAOIf;
+import br.com.vortice.ijuri.business.usuario.dao.UsuarioDAOIf;
 
 /**
  * @author Antonio Fernando

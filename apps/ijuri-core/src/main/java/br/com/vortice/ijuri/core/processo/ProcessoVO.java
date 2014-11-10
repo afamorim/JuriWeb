@@ -273,7 +273,7 @@ public class ProcessoVO extends ValueObject {
     }
     
     /**
-     * Retorna as taxas extras separadas por vírgula
+     * Retorna as taxas extras separadas por virgula
      * @return 
      */
     public String getTaxasExtrasDescricao(){
@@ -281,7 +281,7 @@ public class ProcessoVO extends ValueObject {
     }
 
    /**
-     * Retorna as taxas comuns separadas por vírgula
+     * Retorna as taxas comuns separadas por virgula
      * @return 
      */
     public String getTaxasComunsDescricao(){

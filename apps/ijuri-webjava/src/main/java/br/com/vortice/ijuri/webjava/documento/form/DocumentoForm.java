@@ -1,14 +1,8 @@
-package br.com.vortice.ijuri.documento.cliente.web.form;
+package br.com.vortice.ijuri.webjava.documento.form;
 
-import javax.servlet.http.HttpServletRequest;
-
-import org.apache.struts.action.ActionErrors;
-import org.apache.struts.action.ActionMapping;
 import org.apache.struts.upload.FormFile;
-import org.apache.struts.util.MessageResources;
 
-import br.com.vortice.ijuri.abstracao.view.BaseActionForm;
-import br.com.vortice.ijuri.abstracao.view.MensagensErroIf;
+import br.com.vortice.ijuri.webjava.abstracao.view.BaseActionForm;
 
 public class DocumentoForm extends BaseActionForm {
     private Long codigo;

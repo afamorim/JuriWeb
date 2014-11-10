@@ -38,7 +38,7 @@ public class StatusPagamentoVO extends ValueObject{
         
         statusPagamento = new StatusPagamentoVO();
         statusPagamento.setCodigo(AGUARDANDO_COMPENSACAO_CHEQUE);
-        statusPagamento.setDescricao("Cheque à compensar");
+        statusPagamento.setDescricao("Cheque Ã© compensar");
         tiposMap.put(statusPagamento.getCodigo(), statusPagamento);
     }
 

@@ -1,7 +1,6 @@
 package br.com.vortice.ijuri.webjava.abstracao.view;
 
 import java.io.IOException;
-import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.net.SocketException;
 
@@ -11,11 +10,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.vortice.ijuri.documento.DocumentoVO;
-import br.com.vortice.ijuri.documento.cliente.web.DocumentoDelegate;
+import br.com.vortice.ijuri.core.documento.DocumentoVO;
+import br.com.vortice.ijuri.webjava.documento.DocumentoDelegate;
 
-import com.vortice.exception.AmbienteException;
-import com.vortice.exception.AplicacaoException;
+import com.vortice.core.exception.AmbienteException;
+import com.vortice.core.exception.AplicacaoException;
 
 public abstract class BaseDownloadAction extends HttpServlet {
 	
@@ -46,7 +45,7 @@ public abstract class BaseDownloadAction extends HttpServlet {
             if (contentType != null)
                 response.setContentType(contentType);
             
-            //Seta o tamanho do documneto que ser· enviado
+            //Seta o tamanho do documneto que ser√° enviado
             byte[] bytes = documento.getBytes();
             response.setContentLength(bytes.length);
             
@@ -57,7 +56,7 @@ public abstract class BaseDownloadAction extends HttpServlet {
             
             try{
                 outputStream.flush();
-            }catch(SocketException se){//Caso o usu·rio n„o queira baixar o documento}
+            }catch(SocketException se){//Caso o usu√°rio n√£o queira baixar o documento}
                 se.printStackTrace();
             }
             outputStream.close();

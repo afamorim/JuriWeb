@@ -1,4 +1,4 @@
-package br.com.vortice.ijuri.documento.cliente.web.action;
+package br.com.vortice.ijuri.webjava.documento.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,13 +7,14 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import br.com.vortice.ijuri.abstracao.view.BaseAction;
-import br.com.vortice.ijuri.abstracao.view.MensagemSucessoIf;
-import br.com.vortice.ijuri.documento.DiretorioVO;
-import br.com.vortice.ijuri.documento.DocumentoVO;
-import br.com.vortice.ijuri.documento.cliente.web.DocumentoDelegate;
-import br.com.vortice.ijuri.documento.cliente.web.form.DocumentoForm;
-import com.vortice.exception.AplicacaoException;
+import br.com.vortice.ijuri.core.documento.DiretorioVO;
+import br.com.vortice.ijuri.core.documento.DocumentoVO;
+import br.com.vortice.ijuri.webjava.abstracao.view.BaseAction;
+import br.com.vortice.ijuri.webjava.abstracao.view.MensagemSucessoIf;
+import br.com.vortice.ijuri.webjava.documento.DocumentoDelegate;
+import br.com.vortice.ijuri.webjava.documento.form.DocumentoForm;
+
+import com.vortice.core.exception.AplicacaoException;
 
 /**
  * @author Amadeu
@@ -35,7 +36,7 @@ public class DocumentoRemoverAC extends BaseAction {
 		try{
 			documentoDelegate.remove(vo);
 		}catch(AplicacaoException ae){
-			registrarMensagemSucesso(request,"Registro n„o pode ser excluÌdo. Existe uma outra entidade refenciando a entidade atual.");
+			registrarMensagemSucesso(request,"Registro n√£o pode ser exclu√≠do. Existe uma outra entidade refenciando a entidade atual.");
 			hasError = true;
 		}
 		

@@ -1,4 +1,4 @@
-package br.com.vortice.ijuri.documento.cliente.web.form;
+package br.com.vortice.ijuri.webjava.documento.form;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -7,15 +7,15 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts.action.ActionMapping;
 
+import br.com.vortice.ijuri.core.abstracao.util.base64.Base64Encoder;
+import br.com.vortice.ijuri.core.documento.DiretorioVO;
+import br.com.vortice.ijuri.webjava.abstracao.view.BaseActionForm;
+import br.com.vortice.ijuri.webjava.documento.DocumentoDelegate;
+
 import com.jenkov.prizetags.tree.impl.Tree;
 import com.jenkov.prizetags.tree.impl.TreeNode;
 import com.jenkov.prizetags.tree.itf.ITree;
 import com.jenkov.prizetags.tree.itf.ITreeNode;
-
-import br.com.vortice.ijuri.abstracao.util.base64.Base64Encoder;
-import br.com.vortice.ijuri.abstracao.view.BaseActionForm;
-import br.com.vortice.ijuri.documento.DiretorioVO;
-import br.com.vortice.ijuri.documento.cliente.web.DocumentoDelegate;
 
 /**
  * @author Amadeu

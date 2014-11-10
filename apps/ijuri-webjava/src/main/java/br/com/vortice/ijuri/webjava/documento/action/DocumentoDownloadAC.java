@@ -1,4 +1,4 @@
-package br.com.vortice.ijuri.documento.cliente.web.action;
+package br.com.vortice.ijuri.webjava.documento.action;
 
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
@@ -9,11 +9,11 @@ import java.util.zip.ZipInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.vortice.ijuri.abstracao.view.BaseDownloadAction;
-import br.com.vortice.ijuri.documento.DocumentoVO;
+import br.com.vortice.ijuri.core.documento.DocumentoVO;
+import br.com.vortice.ijuri.webjava.abstracao.view.BaseDownloadAction;
 
-import com.vortice.exception.AmbienteException;
-import com.vortice.exception.AplicacaoException;
+import com.vortice.core.exception.AmbienteException;
+import com.vortice.core.exception.AplicacaoException;
 
 public class DocumentoDownloadAC extends BaseDownloadAction {
 	

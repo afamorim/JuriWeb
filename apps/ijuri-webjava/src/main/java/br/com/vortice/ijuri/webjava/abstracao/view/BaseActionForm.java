@@ -146,7 +146,7 @@ public class BaseActionForm extends ActionForm {
     }
 
     /**
-     * Verifica somente se È numero flutuante 
+     * Verifica somente se √© numero flutuante 
      * @param pValor
      * @param pNome
      * @return
@@ -159,7 +159,7 @@ public class BaseActionForm extends ActionForm {
     }
     
     /**
-     * Verifica se nulo ou se È numero flutuante 
+     * Verifica se nulo ou se √© numero flutuante 
      * @param pValor
      * @param pNome
      * @return
@@ -223,7 +223,7 @@ public class BaseActionForm extends ActionForm {
     }
 
     /**
-     * Verifica se a string È nulo ou vazia. Retorna false se isso ocorrer.    
+     * Verifica se a string √© nulo ou vazia. Retorna false se isso ocorrer.    
      * 
      * @param pObj
      * @param pParametro
@@ -237,7 +237,7 @@ public class BaseActionForm extends ActionForm {
     }
     
     /**
-     * Vrifica se vazio ou È igual a zero
+     * Vrifica se vazio ou √© igual a zero
      * @param pObj
      * @param pParametro
      * @return
@@ -250,7 +250,7 @@ public class BaseActionForm extends ActionForm {
     }
     
     /**
-     * Verifica se a data est· vazia ou est· inv·lida
+     * Verifica se a data est√° vazia ou est√° inv√°lida
      * @param pObj
      * @param pParametro
      * @return
@@ -264,7 +264,7 @@ public class BaseActionForm extends ActionForm {
 
 
     /**
-     *  … importante retornar boolean para que a classe form filha possa
+     *  √â importante retornar boolean para que a classe form filha possa
      *  saber se houve algum erro, para manipular alguma acao entre outras coisas.
      *
      **/
@@ -379,7 +379,7 @@ public class BaseActionForm extends ActionForm {
 
     public void imprimir(Object o){
             try{
-                System.out.println("INÕCIO - IMPRIMINDO PROPRIEDADES DE ["+o.getClass().getName()+"]:");
+                System.out.println("IN√çCIO - IMPRIMINDO PROPRIEDADES DE ["+o.getClass().getName()+"]:");
                 
                 Map map = BeanUtils.describe(o);
                 Set keys = map.keySet();
@@ -451,7 +451,7 @@ public class BaseActionForm extends ActionForm {
    
    /**
     * Retorna o locale configurado no web.xml. (LOCALE_LANGUAGE & LOCALE_COUNTRY)
-    * @return java.util.Locale da AplicaÁ„o
+    * @return java.util.Locale da Aplica√ß√£o
     */
    protected Locale getLocale(){
        String linguagem = getServlet().getServletConfig().getServletContext().getInitParameter("LOCALE_LANGUAGE");
@@ -461,8 +461,8 @@ public class BaseActionForm extends ActionForm {
    }
    
    /**
-    * Seta no request um cÛdigo javscript para executar um alert no cliente com a mensagem passada.
-    * Deve ser colocado na p·gina (jsp)   <c:out escapeXml="false" value="${msg}" />
+    * Seta no request um c√≥digo javscript para executar um alert no cliente com a mensagem passada.
+    * Deve ser colocado na p√°gina (jsp)   <c:out escapeXml="false" value="${msg}" />
     * @param request
     * @param msg 
     */

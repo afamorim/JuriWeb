@@ -7,8 +7,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-import com.vortice.exception.AmbienteException;
-import com.vortice.exception.AplicacaoException;
+import com.vortice.core.exception.AmbienteException;
 
 public class DateUtil {
 
@@ -78,7 +77,7 @@ public class DateUtil {
     
     
     /**
-     * Retorna uma nova data somada de um mês.
+     * Retorna uma nova data somada de um mÃªs.
      * @param data
      * @return
      */

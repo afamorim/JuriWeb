@@ -1,7 +1,7 @@
 package br.com.vortice.ijuri.core.abstracao.util;
 
 /**
- * Classe Respons·vel por auxiliar a manipulaÁ„o de strings  
+ * Classe Respons√°vel por auxiliar a manipula√ß√£o de strings  
  * @author Amadeu
  */
 

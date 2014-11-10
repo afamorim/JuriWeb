@@ -1,8 +1,8 @@
 <%@page isELIgnored="false" %>
-<%@ taglib uri="/tags/c" prefix="c" %>
-<%@ taglib uri="/tags/fmt" prefix="fmt" %>
-<%@ taglib uri="/tags/struts-bean" prefix="bean" %>
-<%@ taglib uri="/tags/struts-html" prefix="html" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib tagdir="/WEB-INF/tld/struts-bean.tld" prefix="bean" %>
+<%@ taglib uri="/WEB-INF/tld/struts-html.tld" prefix="html" %>
 <html:html>
 	<head>
 		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">

@@ -2,7 +2,7 @@
 package br.com.vortice.ijuri.core.pessoa;
 
 import br.com.vortice.ijuri.core.abstracao.ValueObject;
-import br.com.vortice.ijuri.core.seguranca.UsuarioVO;
+import br.com.vortice.jvseguranca.core.Usuario;
 
 public class PessoaVO extends ValueObject {
 	
@@ -24,7 +24,7 @@ public class PessoaVO extends ValueObject {
     private String 		telefone;
     private Integer 	tipo;
     private String 		email;
-    private UsuarioVO	usuario;
+    private Usuario	usuario;
 
     public String getEmail() {
         return email;
@@ -105,11 +105,11 @@ public class PessoaVO extends ValueObject {
         this.tipo = tipo;
     }
 
-	public UsuarioVO getUsuario() {
+	public Usuario getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(UsuarioVO usuario) {
+	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
     

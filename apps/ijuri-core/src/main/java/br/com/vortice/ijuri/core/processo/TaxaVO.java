@@ -128,11 +128,11 @@ public class TaxaVO extends ValueObject implements Comparable{
                 }else{
                      cal.setTime(taxaAnterior.getMesAno());
                      cal.add(Calendar.MONTH,1);
-                     // se for o útimo
+                     // se for o Ã³timo
                      if (!iter.hasNext()){
                          if (!cal.getTime().equals(taxa.getMesAno())){
                              if (contTaxas > 1){
-                                 msg.append(" à ");
+                                 msg.append(" Ã© ");
                                  msg.append(taxaAnterior.toString());
                              }
                              
@@ -140,16 +140,16 @@ public class TaxaVO extends ValueObject implements Comparable{
                              msg.append(taxa.toString());
                          }else{
                              if (contTaxas >= 1)
-                                 msg.append(" à ");
+                                 msg.append(" Ã© ");
                              else
                                  msg.append(", ");
                              
                              msg.append(taxa.toString());
                          }
-                     //se o não está em sequência
+                     //se o nÃ£o estÃ¡ em sequÃªncia
                      }else if (!cal.getTime().equals(taxa.getMesAno())){
                          if (contTaxas > 1){
-                             msg.append(" à ");
+                             msg.append(" Ã© ");
                              msg.append(taxaAnterior.toString());
                          }else if (contTaxas == 1){
                              msg.append(", ");
@@ -159,7 +159,7 @@ public class TaxaVO extends ValueObject implements Comparable{
                          msg.append(", ");
                          msg.append(taxa.toString());
                          contTaxas = 0;
-                     //se está em sequência
+                     //se estÃ¡ em sequÃªncia
                      }else{
                          contTaxas++;
                      }

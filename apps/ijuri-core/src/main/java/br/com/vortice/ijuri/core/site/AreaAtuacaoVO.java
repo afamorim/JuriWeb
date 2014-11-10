@@ -15,7 +15,7 @@ public class AreaAtuacaoVO extends ValueObject {
     static{
         AreaAtuacaoVO areaAtuacao = new AreaAtuacaoVO();
         areaAtuacao.setCodigo(new Integer(1));
-        areaAtuacao.setDescricao("Condomínio");
+        areaAtuacao.setDescricao("CondomÃ­nio");
         map.put(areaAtuacao.getCodigo(), areaAtuacao);
         
         areaAtuacao = new AreaAtuacaoVO();
@@ -25,7 +25,7 @@ public class AreaAtuacaoVO extends ValueObject {
         
         areaAtuacao = new AreaAtuacaoVO();
         areaAtuacao.setCodigo(new Integer(3));
-        areaAtuacao.setDescricao("Municípios");
+        areaAtuacao.setDescricao("MunicÃ­pios");
         map.put(areaAtuacao.getCodigo(), areaAtuacao);
         
         

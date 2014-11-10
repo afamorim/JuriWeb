@@ -79,7 +79,7 @@
 		<param-value>server</param-value>
 	</context-param>
 	
-	<context-param>
+	<!-- context-param>
 		<param-name>org.richfaces.SKIN</param-name>
 		<param-value>blueSky</param-value>
 	</context-param>
@@ -95,7 +95,7 @@
 		<dispatcher>REQUEST</dispatcher>
 		<dispatcher>FORWARD</dispatcher>
 		<dispatcher>INCLUDE</dispatcher>
-	</filter-mapping>
+	</filter-mapping-->
 	
  	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -190,12 +190,12 @@
 			<param-value>100k</param-value>
 		</init-param>
 	</filter-->
-	<filter>
+	<!-- ilter>
 		<filter-name>SegurancaFilter</filter-name>
 		<filter-class>
 			com.vortice.seguranca.cliente.web.SegurancaFilter
 		</filter-class>
-	</filter>
+	</filter-->
 	
 	<filter>
 		<filter-name>DwrFacesFilter</filter-name>
@@ -246,10 +246,10 @@
 		<url-pattern>/dwr/*</url-pattern>
 	</filter-mapping>
 	
-	<filter-mapping>
+	<!-- <filter-mapping>
 		<filter-name>SegurancaFilter</filter-name>
 		<url-pattern>/admin/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> -->
 	
 	<!--  filter-mapping>
 		<filter-name>extensionsFilter</filter-name>
@@ -277,7 +277,7 @@
 		</servlet-class>
 	</servlet-->
 	
-	<servlet>
+	<!-- <servlet>
 		<servlet-name>Faces Servlet</servlet-name>
 		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
 		<load-on-startup>1</load-on-startup>
@@ -285,15 +285,15 @@
 	<servlet-mapping>
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.jsf</url-pattern>
-	</servlet-mapping>
+	</servlet-mapping> -->
 	
-	<servlet>
-		<servlet-name>context-loader</servlet-name>
-		<servlet-class>
-			org.springframework.web.context.ContextLoaderServlet
-		</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	
 	<servlet>
 		<servlet-name>action</servlet-name>
 		<servlet-class>
@@ -527,7 +527,6 @@
 		<taglib-location>/WEB-INF/tld/fmt.tld</taglib-location>
 	</taglib>
 	
-	<!-- Start of SiteMesh stuff Tag Lib-->
 	<taglib>
 		<taglib-uri>sitemesh-page</taglib-uri>
 		<taglib-location>/WEB-INF/tld/sitemesh-page.tld</taglib-location>
@@ -536,9 +535,7 @@
 		<taglib-uri>sitemesh-decorator</taglib-uri>
 		<taglib-location>/WEB-INF/tld/sitemesh-decorator.tld</taglib-location>
 	</taglib>
-	<!-- End of SiteMesh stuff Tag Lib-->
 	
-	<!-- Struts Tag Library Descriptors -->
 	<taglib>
 		<taglib-uri>/tags/struts-bean</taglib-uri>
 		<taglib-location>/WEB-INF/tld/struts-bean.tld</taglib-location>

@@ -18,7 +18,7 @@ public class TipoParteVO extends ValueObject {
     static{
         TipoParteVO tipoParte = new TipoParteVO();
         tipoParte.setCodigo(new Integer(REU));
-        tipoParte.setDescricao("Réu");
+        tipoParte.setDescricao("RÃ©u");
         tiposMap.put(tipoParte.getCodigo(), tipoParte);
         
         tipoParte = new TipoParteVO();

@@ -6,11 +6,8 @@ import java.util.Properties;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
-import org.apache.velocity.context.Context;
-import org.apache.velocity.util.introspection.MethodMap.AmbiguousException;
 
-import com.vortice.exception.AmbienteException;
-import com.vortice.exception.AplicacaoException;
+import com.vortice.core.exception.AmbienteException;
 
 public class VelocityUtil {
 	

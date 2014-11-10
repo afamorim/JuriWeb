@@ -22,7 +22,7 @@ public class RegimeMultaVO extends ValueObject {
         
         regimeMulta = new RegimeMultaVO();
         regimeMulta.setCodigo(new Integer(2));
-        regimeMulta.setDescricao("Cláusula Penal por Mês (%)");
+        regimeMulta.setDescricao("ClÃ¡usula Penal por MÃªs (%)");
         map.put(regimeMulta.getCodigo(), regimeMulta);
         
         

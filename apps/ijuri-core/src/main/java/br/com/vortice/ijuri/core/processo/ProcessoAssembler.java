@@ -142,7 +142,7 @@ public class ProcessoAssembler extends ValueObject {
 	}
 
 	/**
-     * Retorna as taxas comuns separadas por vírgula
+     * Retorna as taxas comuns separadas por vÃ­rgula
      * @return 
      */
     public String getTaxasComunsDescricao(){
@@ -154,7 +154,7 @@ public class ProcessoAssembler extends ValueObject {
     }
     
     /**
-     * Retorna as taxas extras separadas por vírgula
+     * Retorna as taxas extras separadas por vÃ­rgula
      * @return 
      */
     public String getTaxasExtrasDescricao(){

@@ -11,7 +11,6 @@ import java.util.Properties;
 
 import javax.activation.DataHandler;
 import javax.activation.FileDataSource;
-
 import javax.mail.BodyPart;
 import javax.mail.Message;
 import javax.mail.MessagingException;
@@ -22,8 +21,7 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
-import com.vortice.exception.AmbienteException;
-import com.vortice.exception.AplicacaoException;
+import com.vortice.core.exception.AplicacaoException;
 
 public class EmailUtil {
 
@@ -53,7 +51,7 @@ public class EmailUtil {
             tr.close();
         }catch(Exception e){
             e.printStackTrace();
-            throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+            throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
         }    
         
     }
@@ -95,7 +93,7 @@ public class EmailUtil {
             tr.close();
         }catch(Exception e){
             e.printStackTrace();
-            throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+            throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
         }    
        
     }
@@ -149,7 +147,7 @@ public class EmailUtil {
             tr.close();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+            throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
         }
         
         return;
@@ -176,7 +174,7 @@ public class EmailUtil {
             tr.close();
         } catch (Exception e) {
             e.printStackTrace();
-            throw new AplicacaoException("Mensagem de E-mail n„o enviada", e);
+            throw new AplicacaoException("Mensagem de E-mail n√£o enviada", e);
         }
         
        

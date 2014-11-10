@@ -86,7 +86,7 @@ public class AndamentoVO extends ValueObject {
         if (interno.booleanValue())
             return "Sim";
         else
-            return "Não";
+            return "NÃ£o";
     }
     
     public String getDescricaoCompleta(){

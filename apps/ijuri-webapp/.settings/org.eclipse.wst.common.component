@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ijuri-webapp">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="ijuri-core-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ijuri-core/ijuri-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ijuri-business-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ijuri-business/ijuri-business">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="ijuri-webjava-1.0-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/ijuri-webjava/ijuri-webjava">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="context-root" value="ijuri-webapp"/>
+        <property name="java-output-path" value="/ijuri-webapp/target/classes"/>
+    </wb-module>
+</project-modules>

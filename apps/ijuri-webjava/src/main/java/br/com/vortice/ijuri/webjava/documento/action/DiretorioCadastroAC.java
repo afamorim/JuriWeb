@@ -7,11 +7,11 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import br.com.vortice.ijuri.core.documento.DiretorioVO;
 import br.com.vortice.ijuri.webjava.abstracao.view.BaseAction;
 import br.com.vortice.ijuri.webjava.abstracao.view.MensagemSucessoIf;
-import br.com.vortice.ijuri.core.documento.DiretorioVO;
-import br.com.vortice.ijuri.documento.cliente.web.DocumentoDelegate;
-import br.com.vortice.ijuri.documento.cliente.web.form.DiretorioForm;
+import br.com.vortice.ijuri.webjava.documento.DocumentoDelegate;
+import br.com.vortice.ijuri.webjava.documento.form.DiretorioForm;
 
 /**
  * @author Amadeu

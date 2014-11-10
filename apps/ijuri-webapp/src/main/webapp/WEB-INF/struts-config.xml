@@ -7,30 +7,30 @@
 
     <!-- ======================================== Form Bean Definitions -->
     <form-beans>
-    	<form-bean name="LinkForm" type="br.com.vortice.ijuri.site.cliente.web.form.LinkForm" />
-    	<form-bean name="IndiceReajusteForm" type="br.com.vortice.ijuri.monetario.cliente.form.IndiceReajusteForm" />
-    	<form-bean name="IndiceReajusteImportacaoForm" type="br.com.vortice.ijuri.monetario.cliente.form.IndiceReajusteImportacaoForm" />
-    	<form-bean name="PeriodoIndiceReajusteForm" type="br.com.vortice.ijuri.monetario.cliente.form.PeriodoIndiceReajusteForm" />
-    	<form-bean name="PropostaOnLineForm" type="br.com.vortice.ijuri.site.cliente.web.form.PropostaOnLineForm" />
-        <form-bean name="JuizoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.JuizoForm" />
-        <form-bean name="OrgaoJudiciarioForm" type="br.com.vortice.ijuri.processo.cliente.web.form.OrgaoJudiciarioForm" />
-        <form-bean name="ClasseProcessoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.ClasseProcessoForm" />
-		<form-bean name="PessoaFisicaForm" type="br.com.vortice.ijuri.pessoa.cliente.web.form.PessoaFisicaForm" />
-		<form-bean name="PessoaForm" type="br.com.vortice.ijuri.pessoa.cliente.web.form.PessoaForm" />
-		<form-bean name="PessoaJuridicaForm" type="br.com.vortice.ijuri.pessoa.cliente.web.form.PessoaJuridicaForm" />
-		<form-bean name="MunicipioForm" type="br.com.vortice.ijuri.localidade.cliente.web.form.MunicipioForm" />
-		<form-bean name="ComarcaForm" type="br.com.vortice.ijuri.processo.cliente.web.form.ComarcaForm" />
-		<form-bean name="ParteProcessoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.ParteProcessoForm" />
-		<form-bean name="TipoAndamentoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.TipoAndamentoForm" />
-		<form-bean name="ProcessoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.ProcessoForm" />
-		<form-bean name="AndamentoForm" type="br.com.vortice.ijuri.processo.cliente.web.form.AndamentoForm" />
-		<form-bean name="UsuarioForm" type="br.com.vortice.ijuri.usuario.cliente.web.form.UsuarioForm" />
-		<form-bean name="TaxaForm" type="br.com.vortice.ijuri.processo.cliente.web.form.TaxaForm" />
-		<form-bean name="AcordoForm" type="br.com.vortice.ijuri.processo.acordo.cliente.web.form.AcordoForm" />
-		<form-bean name="ParcelaAcordoForm" type="br.com.vortice.ijuri.processo.acordo.cliente.web.form.ParcelaAcordoForm" />
-		<form-bean name="DiretorioForm" type="br.com.vortice.ijuri.documento.cliente.web.form.DiretorioForm" /> 
-		<form-bean name="DocumentoForm" type="br.com.vortice.ijuri.documento.cliente.web.form.DocumentoForm" /> 
-		<form-bean name="JurisprudenciaForm" type="br.com.vortice.ijuri.site.cliente.web.form.JurisprudenciaForm" /> 
+    	<form-bean name="LinkForm" type="br.com.vortice.ijuri.webjava.webjava.site.form.LinkForm" />
+    	<form-bean name="IndiceReajusteForm" type="br.com.vortice.ijuri.webjava.monetario.form.IndiceReajusteForm" />
+    	<form-bean name="IndiceReajusteImportacaoForm" type="br.com.vortice.ijuri.webjava.monetario.form.IndiceReajusteImportacaoForm" />
+    	<form-bean name="PeriodoIndiceReajusteForm" type="br.com.vortice.ijuri.webjava.monetarioform.PeriodoIndiceReajusteForm" />
+    	<form-bean name="PropostaOnLineForm" type="br.com.vortice.ijuri.webjava.site.form.PropostaOnLineForm" />
+        <form-bean name="JuizoForm" type="br.com.vortice.ijuri.webjava.processo.form.JuizoForm" />
+        <form-bean name="OrgaoJudiciarioForm" type="br.com.vortice.ijuri.webjava.processo.form.OrgaoJudiciarioForm" />
+        <form-bean name="ClasseProcessoForm" type="br.com.vortice.ijuri.webjava.processo.form.ClasseProcessoForm" />
+		<form-bean name="PessoaFisicaForm" type="br.com.vortice.ijuri.webjava.pessoa.form.PessoaFisicaForm" />
+		<form-bean name="PessoaForm" type="br.com.vortice.ijuri.webjava.pessoa.form.PessoaForm" />
+		<form-bean name="PessoaJuridicaForm" type="br.com.vortice.ijuri.webjava.pessoa.form.PessoaJuridicaForm" />
+		<form-bean name="MunicipioForm" type="br.com.vortice.ijuri.webjava.localidade.form.MunicipioForm" />
+		<form-bean name="ComarcaForm" type="br.com.vortice.ijuri.webjava.processo.form.ComarcaForm" />
+		<form-bean name="ParteProcessoForm" type="br.com.vortice.ijuri.webjava.processo.form.ParteProcessoForm" />
+		<form-bean name="TipoAndamentoForm" type="br.com.vortice.ijuri.webjava.processo.form.TipoAndamentoForm" />
+		<form-bean name="ProcessoForm" type="br.com.vortice.ijuri.webjava.processo.form.ProcessoForm" />
+		<form-bean name="AndamentoForm" type="br.com.vortice.ijuri.webjava.processo.form.AndamentoForm" />
+		<form-bean name="UsuarioForm" type="br.com.vortice.ijuri.webjava.usuario.form.UsuarioForm" />
+		<form-bean name="TaxaForm" type="br.com.vortice.ijuri.webjava.processo.form.TaxaForm" />
+		<form-bean name="AcordoForm" type="br.com.vortice.ijuri.webjava.processo.acordo.form.AcordoForm" />
+		<form-bean name="ParcelaAcordoForm" type="br.com.vortice.ijuri.webjava.processo.acordo.form.ParcelaAcordoForm" />
+		<form-bean name="DiretorioForm" type="br.com.vortice.ijuri.webjava.documento.form.DiretorioForm" /> 
+		<form-bean name="DocumentoForm" type="br.com.vortice.ijuri.webjava.documento.form.DocumentoForm" /> 
+		<form-bean name="JurisprudenciaForm" type="br.com.vortice.ijuri.webjava.site.form.JurisprudenciaForm" /> 
 	</form-beans>
 
     <!-- =================================== Global Forward Definitions -->

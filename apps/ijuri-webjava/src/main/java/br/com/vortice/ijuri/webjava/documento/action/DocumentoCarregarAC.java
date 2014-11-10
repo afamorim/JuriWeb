@@ -1,4 +1,4 @@
-package br.com.vortice.ijuri.documento.cliente.web.action;
+package br.com.vortice.ijuri.webjava.documento.action;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -7,8 +7,8 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
-import br.com.vortice.ijuri.abstracao.view.BaseAction;
-import br.com.vortice.ijuri.documento.cliente.web.form.DocumentoForm;
+import br.com.vortice.ijuri.webjava.abstracao.view.BaseAction;
+import br.com.vortice.ijuri.webjava.documento.form.DocumentoForm;
 
 /**
  * @author Amadeu

@@ -36,10 +36,12 @@ import org.apache.log4j.Logger;
 import org.apache.struts.util.MessageResources;
 import org.springframework.web.servlet.FrameworkServlet;
 
-import br.com.vortice.ijuri.abstracao.view.MensagemIf;
+import br.com.vortice.ijuri.core.abstracao.relatorio.JavaBeanReportDataSource;
+import br.com.vortice.ijuri.core.abstracao.relatorio.ReportType;
+import br.com.vortice.ijuri.webjava.abstracao.view.MensagemIf;
 
-import com.vortice.exception.AmbienteException;
-import com.vortice.exception.AplicacaoException;
+import com.vortice.core.exception.AmbienteException;
+import com.vortice.core.exception.AplicacaoException;
 
 public abstract class BaseReportAction extends FrameworkServlet {
 
@@ -54,15 +56,15 @@ public abstract class BaseReportAction extends FrameworkServlet {
         try{
 		        if (pRequest.getParameter(REPORT_TYPE_PARAM)==null){
 		            throw new AmbienteException(new StringBuffer()
-		                    .append("O tipo do relatório")
+		                    .append("O tipo do relatï¿½rio")
 		                    .append(" gerado deve ser informado via URL: reportType ")
-		                    .append("não existe.").toString()); 
+		                    .append("nï¿½o existe.").toString()); 
 		        
 		        }
 		        
 		        /*
-		         * Obtém os parâmetros da URL e converte-os para um MAP de parâmetros  
-		         * para o relatório.
+		         * Obtï¿½m os parï¿½metros da URL e converte-os para um MAP de parï¿½metros  
+		         * para o relatï¿½rio.
 		         */
 		        Map parametros = new HashMap();
 		        String item = null;
@@ -82,14 +84,14 @@ public abstract class BaseReportAction extends FrameworkServlet {
 		        if (reportName==null || reportName.trim().equals("")){
 		            throw new AmbienteException(
 		            		new StringBuffer()
-								.append(" O nome do arquivo do relatório deve ")
+								.append(" O nome do arquivo do relatï¿½rio deve ")
 								.append(" ser informado na classe filha.")
 								.toString());
 				      }
 		        
 		        /*
-		         * Obtém o caminho físico do contexto WEB para recuperar o arquivo compilado 
-		         * (.jasper) e gerar o relatório.
+		         * Obtï¿½m o caminho fï¿½sico do contexto WEB para recuperar o arquivo compilado 
+		         * (.jasper) e gerar o relatï¿½rio.
 		         */    
 		        String nomeRelatorio = getServletContext().getRealPath(reportName);
 		        
@@ -100,7 +102,7 @@ public abstract class BaseReportAction extends FrameworkServlet {
                 JRDataSource dataSource = null;
 		        if (retorno != null) {
 		            /*
-                     * Constrói uma fonte de dados(JRDataSource) para o jasper reports  
+                     * Constrï¿½i uma fonte de dados(JRDataSource) para o jasper reports  
                      * a partir de uma collection.
                      */
                     if (retorno instanceof Collection){
@@ -115,10 +117,10 @@ public abstract class BaseReportAction extends FrameworkServlet {
 		        LOG.debug("nomeRelatorio " + nomeRelatorio);
 		        JasperReport report = (JasperReport)JRLoader.loadObject(nomeRelatorio);
 		        
-		        //Seta o LOCALE para o relatório
+		        //Seta o LOCALE para o relatï¿½rio
                 parametros.put("REPORT_LOCALE", getLocale());
                 
-                //Seta o endereço do cliente
+                //Seta o endereï¿½o do cliente
                 MessageResources resource = MessageResources.getMessageResources("clienteResource");
                 parametros.put("ENDERECO_CLIENTE",resource.getMessage(MensagemIf.ENDERECO_CLIENTE));
                 
@@ -142,8 +144,8 @@ public abstract class BaseReportAction extends FrameworkServlet {
 		        		    		exporter.setParameter(JRHtmlExporterParameter.IMAGES_MAP, imagesMap);
 		        		    		
 		        		    		/*
-		        		    		 * Indica ao exporter a ImageServlet do relatório HTML para ser feito o mapeamento.
-		        		    		 * No caso, é utilizado uma Servlet JCImageReportServlet com mapeamento no web.xml
+		        		    		 * Indica ao exporter a ImageServlet do relatï¿½rio HTML para ser feito o mapeamento.
+		        		    		 * No caso, ï¿½ utilizado uma Servlet JCImageReportServlet com mapeamento no web.xml
 		        		    		 * da aplicacao - imageReport   
 		        		    		 */ 
 		        		    		exporter.setParameter(JRHtmlExporterParameter.IMAGES_URI, pRequest.getContextPath()+"/imageReport?image=");
@@ -163,7 +165,7 @@ public abstract class BaseReportAction extends FrameworkServlet {
 		        					exporter.setParameter(JRCsvExporterParameter.FIELD_DELIMITER,";");
         				   		break;
         			default:
-        					throw new AmbienteException("O valor do parâmetro 'reportType' é inválido. ");
+        					throw new AmbienteException("O valor do parï¿½metro 'reportType' ï¿½ invï¿½lido. ");
               }
 		        
 			        
@@ -214,22 +216,22 @@ public abstract class BaseReportAction extends FrameworkServlet {
     
     
     /**
-     * @return nome do arquivo(.jasper) do relatório copilado com o caminho relativo.
+     * @return nome do arquivo(.jasper) do relatï¿½rio copilado com o caminho relativo.
      */
     protected abstract String getReport(HttpServletRequest pRequest);
     
     /**
-     * Método responsável pela configuração do relatório - ajustes de parâmetros 
-     * e obtenção do objeto ou coleção de objetos para preenchimento do relatório.    
-     * @return Um objeto ou uma coleção do objeto que representa cada registro(linha do relatório).   
+     * Mï¿½todo responsï¿½vel pela configuraï¿½ï¿½o do relatï¿½rio - ajustes de parï¿½metros 
+     * e obtenï¿½ï¿½o do objeto ou coleï¿½ï¿½o de objetos para preenchimento do relatï¿½rio.    
+     * @return Um objeto ou uma coleï¿½ï¿½o do objeto que representa cada registro(linha do relatï¿½rio).   
      */
     protected abstract Object configurationReport(HttpServletRequest pRequest, 
             HttpServletResponse pResponse, Map pMap) throws AmbienteException,AplicacaoException;
    
     
     /**
-     * Método através do qual o usuário pode inserir uma imágem a ser apresentada no relatório que 
-     * está sendo gerado
+     * Mï¿½todo atravï¿½s do qual o usuï¿½rio pode inserir uma imï¿½gem a ser apresentada no relatï¿½rio que 
+     * estï¿½ sendo gerado
      * @param parametros
      * @param parameterName
      * @param path
@@ -237,7 +239,7 @@ public abstract class BaseReportAction extends FrameworkServlet {
      */
     public void setParameterImagePath(Map parametros, String parameterName,String path){
         if (parameterName==null){
-            throw new IllegalArgumentException("Nome do parâmetro deve ser informado.");
+            throw new IllegalArgumentException("Nome do parï¿½metro deve ser informado.");
         }
         if (path==null){
             throw new IllegalArgumentException("O caminho relativo da imagem deve ser informado.");
@@ -274,7 +276,7 @@ public abstract class BaseReportAction extends FrameworkServlet {
 	            throw new IllegalArgumentException("O caminho relativo do sub-report deve ser informado.");
 	        
 	        if (list==null)
-	            throw new IllegalArgumentException("Uma colecão de elementos para o sub-report deve ser informado.");
+	            throw new IllegalArgumentException("Uma colecï¿½o de elementos para o sub-report deve ser informado.");
 	        // getServletContext().getRealPath(
 	        String realPathSubReport = this.getWebApplicationContext().getServletContext().getRealPath(path);
 	        

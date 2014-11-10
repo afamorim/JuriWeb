@@ -8,11 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.web.servlet.FrameworkServlet;
 
-import br.com.vortice.ijuri.abstracao.bean.BeanUtil;
-import br.com.vortice.ijuri.abstracao.bean.PropertyVO;
-
-import com.vortice.exception.AmbienteException;
-import com.vortice.exception.AplicacaoException;
+import com.vortice.core.bean.BeanUtil;
+import com.vortice.core.bean.PropertyVO;
+import com.vortice.core.exception.AmbienteException;
+import com.vortice.core.exception.AplicacaoException;
 
 public abstract class BaseComboAjaxAction extends FrameworkServlet {
 	
@@ -64,10 +63,10 @@ public abstract class BaseComboAjaxAction extends FrameworkServlet {
 	}
 
 	/**
-     * Retorna a coleÁ„o que o combo ser· preenchido.
+     * Retorna a cole√ß√£o que o combo ser√° preenchido.
      * @param request
      * @param response
-     * @return uma coleÁ„o 
+     * @return uma cole√ß√£o 
      */
     protected abstract Collection getCollection(HttpServletRequest request, HttpServletResponse response)
         throws AmbienteException,AplicacaoException;

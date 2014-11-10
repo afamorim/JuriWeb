@@ -17,7 +17,14 @@ public class UsuarioVO extends ValueObject {
 
     private PessoaVO pessoaVO; 
 
-    public Long getCodigo() {
+    public UsuarioVO(Long codigo) {
+		this.codigo = codigo;
+	}
+    
+    public UsuarioVO() {
+	}
+
+	public Long getCodigo() {
         return codigo;
     }
 

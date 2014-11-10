@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 /**
- * Classe responsável por receber um número decimal e converter para 
- * Uma descrição em extenso em português somente.  
+ * Classe responsÃ¡vel por receber um nÃºmero decimal e converter para 
+ * Uma descriÃ§Ã£o em extenso em portuguÃ©s somente.  
  * @author Amadeu
  *
  */
@@ -19,16 +19,16 @@ public class NumeroExtensoConverter {
 			{"centavo", "centavos"},
 			{"", ""},
 			{"mil", "mil"},
-			{"milhão", "milhões"},
-			{"bilhão", "bilhões"},
-			{"trilhão", "trilhões"},
-			{"quatrilhão", "quatrilhões"},
-			{"quintilhão", "quintilhões"},
-			{"sextilhão", "sextilhões"},
-			{"septilhão", "septilhões"}
+			{"milhÃ£o", "milhÃµes"},
+			{"bilhÃ§Ã£o", "bilhÃµes"},
+			{"trilhÃ£o", "trilhÃµes"},
+			{"quatrilhÃ£o", "quatrilhÃµes"},
+			{"quintilhÃ£o", "quintilhÃµes"},
+			{"sextilhÃ£o", "sextilhÃµes"},
+			{"septilhÃ£o", "septilhÃµes"}
 			};
 	private String Numeros[][] = {
-			{"zero", "um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez",
+			{"zero", "um", "dois", "trÃªs", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez",
 			"onze", "doze", "treze", "quatorze", "quinze", "desesseis", "desessete", "dezoito", "desenove"},
 			{"vinte", "trinta", "quarenta", "cinquenta", "sessenta", "setenta", "oitenta", "noventa"},
 			{"cem", "cento", "duzentos", "trezentos", "quatrocentos", "quinhentos", "seiscentos",
@@ -126,7 +126,7 @@ public class NumeroExtensoConverter {
 		int ct;
 
 		for (ct = nro.size() - 1; ct > 0; ct--) {
-			// Se ja existe texto e o atual não é zero
+			// Se ja existe texto e o atual nÃ£o Ã© zero
 			if (buf.length() > 0 && ! ehGrupoZero(ct)) {
 				buf.append(" e ");
 			}

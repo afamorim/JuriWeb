@@ -6,8 +6,8 @@ package br.com.vortice.ijuri.core.abstracao;
 import javax.ejb.SessionBean;
 import javax.ejb.SessionContext;
 
-import com.vortice.exception.AmbienteException;
-import com.vortice.exception.AplicacaoException;
+import com.vortice.core.exception.AmbienteException;
+import com.vortice.core.exception.AplicacaoException;
 
 /**
  * @author Antonio Amadeu
@@ -48,7 +48,7 @@ public class BaseSessionBean implements SessionBean{
   	}
   	
     /**
-     * MÈtodo para tratar excess„o de insert-update-delete
+     * M√©todo para tratar excess√£o de insert-update-delete
      * 
      * @param excessao
      * @return
@@ -63,7 +63,7 @@ public class BaseSessionBean implements SessionBean{
         }else if (excessao instanceof AmbienteException){
             throw (AmbienteException)excessao;
         }else{
-            throw new AmbienteException("Erro n„o tratado:", excessao);
+            throw new AmbienteException("Erro n√£o tratado:", excessao);
         }
         
         

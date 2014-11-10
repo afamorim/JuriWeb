@@ -194,8 +194,8 @@ public class Base64Decoder extends FilterInputStream {
   }
 
   /**
-   * Método que recebe um texto codificado e retorna se possível
-   * o objeto que é representado neste texto.
+   * MÃ©todo que recebe um texto codificado e retorna se possÃ­vel
+   * o objeto que Ã© representado neste texto.
    * @param texto
    * @return
    */

@@ -10,22 +10,22 @@ import br.com.vortice.ijuri.core.configuracao.Configuracao;
 public interface ConfiguracaoDAOIf {
 	
 	/**
-	 * Método que retorna todas as configurações do sistema
+	 * MÃ©todo que retorna todas as configuraÃ§Ãµes do sistema
 	 * @param configuracao
-	 * @return Collection de configurações do sistema
+	 * @return Collection de configuraÃ§Ãµes do sistema
 	 * @throws AmbienteException
 	 */
 	public Configuracao findByPrimaryKey(Configuracao configuracao) throws AmbienteException;
 	
 	/**
-	 * Retornar uma configuração especifica.
+	 * Retornar uma configuraÃ§o especifica.
 	 * @return
 	 * @throws AmbienteException
 	 */
 	public List<Configuracao> findAll() throws AmbienteException;
 	
 	/**
-	 * Método responsavel por atualizar um valor de uma especificação específica.
+	 * MÃ©todo responsavel por atualizar um valor de uma especificaÃ§Ã£o especÃ­fica.
 	 * @param configuracao
 	 * @throws AmbienteException
 	 * @throws AplicacaoException

@@ -23,13 +23,13 @@ import org.apache.struts.util.MessageResources;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.vortice.exception.AplicacaoException;
+import br.com.vortice.ijuri.core.abstracao.util.DateConverter;
+import br.com.vortice.ijuri.core.abstracao.util.DateTimeConverter;
+import br.com.vortice.ijuri.core.abstracao.util.DateUtil;
+import br.com.vortice.ijuri.core.abstracao.util.FloatConverter;
+import br.com.vortice.ijuri.core.abstracao.util.StringConverter;
 
-import br.com.vortice.ijuri.abstracao.util.DateConverter;
-import br.com.vortice.ijuri.abstracao.util.DateTimeConverter;
-import br.com.vortice.ijuri.abstracao.util.DateUtil;
-import br.com.vortice.ijuri.abstracao.util.FloatConverter;
-import br.com.vortice.ijuri.abstracao.util.StringConverter;
+import com.vortice.core.exception.AplicacaoException;
 
 /**
  * <p>Title: </p>
@@ -179,8 +179,8 @@ public abstract class BaseAction extends Action {
   }
   
   /**
-   * Seta no request um código javscript para executar um alert no cliente com a mensagem passada.
-   * Deve ser colocado na página (jsp)   <c:out escapeXml="false" value="${msg}" />
+   * Seta no request um cÃ³digo javscript para executar um alert no cliente com a mensagem passada.
+   * Deve ser colocado na pÃ¡gina (jsp)   <c:out escapeXml="false" value="${msg}" />
    * @param request
    * @param msg 
    */
@@ -195,7 +195,7 @@ public abstract class BaseAction extends Action {
   
   /**
    * Seta no request um span HTML com a mensagem passada.
-   * Deve ser colocado na página (jsp)   <c:out escapeXml="false" value="${msg}" />
+   * Deve ser colocado na pÃ¡gina (jsp)   <c:out escapeXml="false" value="${msg}" />
    * @param request
    * @param msg 
    */
@@ -218,7 +218,7 @@ public abstract class BaseAction extends Action {
   
   /**
    * Retorna o locale configurado no web.xml. (LOCALE_LANGUAGE & LOCALE_COUNTRY)
-   * @return java.util.Locale da Aplicação
+   * @return java.util.Locale da AplicaÃ§Ã£o
    */
   protected Locale getLocale(){
       String linguagem = getServlet().getServletConfig().getServletContext().getInitParameter("LOCALE_LANGUAGE");
@@ -229,9 +229,9 @@ public abstract class BaseAction extends Action {
   
   /**
    * Seta no request um bloco de javascript para ser executado no cliente.
-   * Deve ser colocado na página (jsp)   <c:out escapeXml="false" value="${script}" />
+   * Deve ser colocado na pÃ¡gina (jsp)   <c:out escapeXml="false" value="${script}" />
    * @param request
-   * @param script (Código javascript SEM a tag '<SCRIPT>'
+   * @param script (CÃ³digo javascript SEM a tag '<SCRIPT>'
    */
   protected void registrarScript(HttpServletRequest request,String script){
       StringBuffer scriptBuff = new StringBuffer();
@@ -243,8 +243,8 @@ public abstract class BaseAction extends Action {
   }
   
   /**
-   * Seta no request um código javscript para executar um alert no cliente com a chave da mensagem do Resource passada.
-   * Deve ser colocado na página (jsp)   <c:out escapeXml="false" value="${msg}" />
+   * Seta no request um cÃ³digo javscript para executar um alert no cliente com a chave da mensagem do Resource passada.
+   * Deve ser colocado na pÃ¡gina (jsp)   <c:out escapeXml="false" value="${msg}" />
    * @param request
    * @param msg 
    */

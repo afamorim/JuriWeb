@@ -12,15 +12,15 @@
 			<param name="beanName" value="perfilRN"/>
 		</create>
 		
-		<convert converter="bean" match="com.vortice.seguranca.vo.UsuarioVO">
+		<convert converter="bean" match="br.com.vortice.jvseguranca.core.Usuario">
 			<param name="include" value="codigo, login, perfil"></param>
 		</convert>
 	
-		<convert converter="bean" match="com.vortice.seguranca.vo.PerfilVO">
+		<convert converter="bean" match="br.com.vortice.jvseguranca.core.Perfil">
 			<param name="include" value="codigo, nome"></param>
 		</convert>
 		
-		<convert converter="bean" match="br.com.vortice.ijuri.pessoa.PessoaVO">
+		<convert converter="bean" match="br.com.vortice.ijuri.core.pessoa.PessoaVO">
 			<param name="include" value="codigo, nome, email, usuario"></param>
 		</convert>
 	</allow>

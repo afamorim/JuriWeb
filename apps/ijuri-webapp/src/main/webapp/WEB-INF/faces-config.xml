@@ -417,7 +417,7 @@
 	</navigation-rule>
 	<!-- USUARIO -->
 	
-	<render-kit>
+	<!-- render-kit>
 		<renderer>
 			<component-family>javax.faces.Command</component-family>
 			<renderer-type>javax.faces.Button</renderer-type>
@@ -429,10 +429,14 @@
 			<renderer-type>javax.faces.Link</renderer-type>
 			<renderer-class>org.apache.myfaces.renderkit.html.jsf.ExtendedHtmlLinkRenderer</renderer-class>
 		</renderer>
-	</render-kit>
+	</render-kit-->
 	
 	<application>
-		<variable-resolver>org.springframework.web.jsf.DelegatingVariableResolver</variable-resolver>
+		<!-- variable-resolver>org.springframework.web.jsf.DelegatingVariableResolver</variable-resolver-->
+		<variable-resolver>org.springframework.web.jsf.SpringBeanVariableResolver</variable-resolver>
+		<!-- el-resolver> 
+			org.springframework.web.jsf.el.SpringBeanFacesELResolver 
+		</el-resolver--> 
 		<locale-config>
 			<default-locale>pt_BR</default-locale>
 			<supported-locale>pt_BR</supported-locale>

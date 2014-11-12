@@ -6,6 +6,7 @@ function carregaPerfis(){
 }
 
 function carregaOptPerfil(perfis){
+	alert(perfis);
 	var strOptPerfil = "";
 	DWRUtil.addOptions("selPerfil", perfis, "codigo", "nome");
 }
@@ -15,7 +16,7 @@ function createWindowPerfil(pessoaCodigo)
 	var newWindowModel = new DHTMLSuite.windowModel({windowsTheme:true,id:'newWindow',title:'Perfis',xPos:200,yPos:200,minWidth:100,minHeight:100 } );
 	newWindowModel.addTab(
 	{ 
-	id:'myTab',htmlElementId:'myTab',tabTitle:'Seleção de Perfil',
+	id:'myTab',htmlElementId:'myTab',tabTitle:'Seleï¿½ï¿½o de Perfil',
 	textContent:'<label>Perfil:</label> <select id="selPerfil">'+strOptPerfil+'</select><br/>' +
 		'<input type="button" name="bt_perfil" value="Selecione" ' + 
 		'onclick="document.forms[0].pessoaCodigo.value='+pessoaCodigo+';'+
@@ -40,20 +41,20 @@ function criarUsuario(){
 			alert(e);
 		}
 	}else{
-		alert("Selecione uma Pessoa e Perfil válidos.");
+		alert("Selecione uma Pessoa e Perfil vï¿½lidos.");
 	}
 }
 
 function userCriadoSucesso(){
-	alert("Usuário criado com sucesso.");
+	alert("Usuï¿½rio criado com sucesso.");
 	document.getElementById("acaoUsuario").innerHTML = "" + 
-	"<a href='#' onclick='ativarUsuario("+ document.forms[0].pessoaCodigo.value +");' title='Ativar Usuário'> " +
-	"	<img src='"+ IMG_USER_DESATIVADO +"' border='0' title='Ativar Usuário'/>" +
+	"<a href='#' onclick='ativarUsuario("+ document.forms[0].pessoaCodigo.value +");' title='Ativar Usuï¿½rio'> " +
+	"	<img src='"+ IMG_USER_DESATIVADO +"' border='0' title='Ativar Usuï¿½rio'/>" +
 	"</a>";
 }
 
 function desativarUsuario(codigo){
-	if (confirm("Deseja desativar o usuário?")){
+	if (confirm("Deseja desativar o usuï¿½rio?")){
 		pessoa = {codigo: codigo};
 		document.forms[0].pessoaCodigo.value = codigo;
 		try{
@@ -65,15 +66,15 @@ function desativarUsuario(codigo){
 }
 
 function userDesativado(){
-	alert("Usuário desativado com sucesso.");
+	alert("Usuï¿½rio desativado com sucesso.");
 	document.getElementById("acaoUsuario").innerHTML = "" + 
-	"<a href='#' onclick='ativarUsuario("+ document.forms[0].pessoaCodigo.value +");' title='Ativar Usuário'> " +
-	"	<img src='"+ IMG_USER_DESATIVADO +"' border='0' title='Ativar Usuário'/>" +
+	"<a href='#' onclick='ativarUsuario("+ document.forms[0].pessoaCodigo.value +");' title='Ativar Usuï¿½rio'> " +
+	"	<img src='"+ IMG_USER_DESATIVADO +"' border='0' title='Ativar Usuï¿½rio'/>" +
 	"</a>";
 }
 
 function ativarUsuario(codigo){
-	if (confirm("Deseja ativar o usuário?")){
+	if (confirm("Deseja ativar o usuï¿½rio?")){
 		pessoa = {codigo: codigo};
 		document.forms[0].pessoaCodigo.value = codigo;
 		try{
@@ -85,9 +86,9 @@ function ativarUsuario(codigo){
 }
 
 function userAtivado(){
-	alert("Usuário ativado com sucesso.");
+	alert("Usuï¿½rio ativado com sucesso.");
 	document.getElementById("acaoUsuario").innerHTML = "" + 
-	"<a href='#' onclick='desativarUsuario("+ document.forms[0].pessoaCodigo.value +");' title='Desativar Usuário'> " +
-	"	<img src='"+ IMG_USER_ATIVADO +"' border='0' title='Desativar Usuário'/>" +
+	"<a href='#' onclick='desativarUsuario("+ document.forms[0].pessoaCodigo.value +");' title='Desativar Usuï¿½rio'> " +
+	"	<img src='"+ IMG_USER_ATIVADO +"' border='0' title='Desativar Usuï¿½rio'/>" +
 	"</a>";
 }

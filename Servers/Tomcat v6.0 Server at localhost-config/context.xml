@@ -15,4 +15,6 @@
     <Valve className="org.apache.catalina.valves.CometConnectionManagerValve" />
     -->
 	<ResourceLink global="jdbc/telemedicinaDB" name="jdbc/telemedicinaDB" type="javax.sql.DataSource"/>
+	
+	<ResourceLink global="jdbc/juriwebDB" name="jdbc/juriwebDB" type="javax.sql.DataSource"/>
 </Context>

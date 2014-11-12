@@ -204,13 +204,21 @@
 				<version>2.3</version>
 			</dependency>
 
-			<dependency>
+			<!--dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>3.0.1</version>
                 <scope>provided</scope>
-            </dependency>
+            </dependency-->
             
+            <dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+			</dependency>
+
+
             <dependency>
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>jsp-api</artifactId>
@@ -234,6 +242,18 @@
 				<groupId>jsptags</groupId>
 				<artifactId>pager-taglib</artifactId>
 				<version>2.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.faces</groupId>
+				<artifactId>jsf-api</artifactId>
+				<version>1.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.faces</groupId>
+				<artifactId>jsf-impl</artifactId>
+				<version>1.2_15</version>
 			</dependency>
 
 		</dependencies>
